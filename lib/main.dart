@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/localization/changelocal.dart';
 import 'package:flutter_application_1/core/localization/translation.dart';
 import 'package:flutter_application_1/core/services/services.dart';
+import 'package:flutter_application_1/routes.dart';
 import 'package:flutter_application_1/view/screen/language.dart';
 import 'package:get/get.dart';
 
@@ -26,8 +27,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        // textTheme: const TextTheme(
+        //   headline1: TextStyle(
+        //     fontWeight: FontWeight.bold,
+        //     fontSize: 22,
+        //     color: Colors.black
+        //   )
+        // )
       ),
       home: const Language(),
+      routes: routes,
     );
   }
 }

@@ -13,7 +13,7 @@ class CustomButtonLang extends StatelessWidget {
       child: MaterialButton(
         color: Colors.blue[700],
         textColor: Colors.white,
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           textbutton,
           style: const TextStyle(fontWeight: FontWeight.bold),
