@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/localization/changelocal.dart';
+import 'package:flutter_application_1/core/localization/translation.dart';
 import 'package:flutter_application_1/core/services/services.dart';
+import 'package:flutter_application_1/view/screen/language.dart';
 import 'package:get/get.dart';
 
 void main() async {
@@ -14,14 +17,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    LocaleController controller = Get.put(LocaleController());
     return GetMaterialApp(
+      translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
+      locale: controller.language,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: ,
+      home: const Language(),
     );
   }
 }
