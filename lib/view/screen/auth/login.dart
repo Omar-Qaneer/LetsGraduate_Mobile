@@ -57,7 +57,9 @@ class Login extends StatelessWidget {
                     child: CustomTextButtonAuth(
                       textOfTextButton: "Forget Password ?",
                       alignment: Alignment.centerRight,
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.goToForgetPassword();
+                      },
                     )),
 
                 //signin_button
