@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/view/widget/auth/customlogoauth.dart';
+import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextformauth.dart';
 
@@ -44,12 +45,9 @@ class Login extends StatelessWidget {
                 )),
 
             //signin_button
-            MaterialButton(
-              minWidth: 350,
+            CustomMaterialButtonAuth(
+              text: "SIGN IN",
               onPressed: () {},
-              color: Colors.blue[800],
-              textColor: Colors.white,
-              child: const Text("SIGN IN"),
             ),
 
             Padding(
