@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/constant/imageasset.dart';
 
 class CustomLogoAuth extends StatelessWidget {
   const CustomLogoAuth({super.key});
@@ -9,7 +10,7 @@ class CustomLogoAuth extends StatelessWidget {
       width: 200,
       height: 200,
       child: Image.asset(
-        "assets/images/letsgraduate-logo-with-text.png",
+        AppImageAsset.logoImage,
       ),
     );
   }
