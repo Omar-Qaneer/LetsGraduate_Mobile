@@ -30,7 +30,7 @@ class SignUp extends StatelessWidget {
                 const CustomTextFormAuth(
                   labeltext: "Full Name*",
                   obscureText: false,
-                  textInputType: TextInputType.number,
+                  textInputType: TextInputType.text,
                   hinttext: 'Enter Your Name',
                   iconData: Icons.numbers,
                 ),
@@ -38,8 +38,8 @@ class SignUp extends StatelessWidget {
                 //StudentNumber_field
                 const CustomTextFormAuth(
                   labeltext: "University Number*",
-                  obscureText: true,
-                  textInputType: TextInputType.text,
+                  obscureText: false,
+                  textInputType: TextInputType.number,
                   hinttext: 'Enter Your Number',
                   iconData: Icons.lock_outline,
                 ),
@@ -78,6 +78,10 @@ class SignUp extends StatelessWidget {
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Your Password',
                   iconData: Icons.lock_outline,
+                ),
+
+                const SizedBox(
+                  height: 20,
                 ),
 
                 //signup_button
