@@ -3,8 +3,8 @@ import 'package:flutter_application_1/core/constant/routes.dart';
 import 'package:get/get.dart';
 
 abstract class SignUpController extends GetxController {
-  login();
-  goToSignUp();
+  signUp();
+  goToSignIn();
 }
 
 class SignUpControllerImp extends SignUpController {
@@ -16,12 +16,12 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController password;
 
   @override
-  goToSignUp() {
-    Get.toNamed(AppRoute.signUp);
+  goToSignIn() {
+    Get.offNamed(AppRoute.login);
   }
 
   @override
-  login() {}
+  signUp() {}
 
   @override
   void onInit() {

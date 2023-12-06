@@ -35,7 +35,7 @@ class SignUp extends StatelessWidget {
                   obscureText: false,
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Your Name',
-                  iconData: Icons.numbers,
+                  iconData: Icons.account_circle_rounded,
                   mycontroller: controller.fullName,
                 ),
 
@@ -65,7 +65,7 @@ class SignUp extends StatelessWidget {
                   obscureText: false,
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Your Address',
-                  iconData: Icons.lock_outline,
+                  iconData: Icons.add_location_alt,
                   mycontroller: controller.address,
                 ),
 
@@ -75,7 +75,7 @@ class SignUp extends StatelessWidget {
                   obscureText: false,
                   textInputType: TextInputType.phone,
                   hinttext: 'Enter Your Number',
-                  iconData: Icons.lock_outline,
+                  iconData: Icons.add_ic_call,
                   mycontroller: controller.mobileNumber,
                 ),
 
@@ -103,7 +103,9 @@ class SignUp extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 20),
                   child: CustomTextButtonAuth(
                     textOfTextButton: "Already have account ? Sign In",
-                    onPressed: () {},
+                    onPressed: () {
+                      controller.goToSignIn();
+                    },
                     alignment: Alignment.center,
                   ),
                 )
