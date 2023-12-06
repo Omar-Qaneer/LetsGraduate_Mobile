@@ -26,7 +26,9 @@ class Login extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 //logo_image
-                const CustomLogoAuth(),
+                const CustomLogoAuth(
+                  height: 200,
+                ),
 
                 //registressionNumber_field
                 const CustomTextFormAuth(

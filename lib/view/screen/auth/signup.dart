@@ -22,7 +22,9 @@ class SignUp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 //logo_image
-                const CustomLogoAuth(),
+                const CustomLogoAuth(
+                  height: 100,
+                ),
 
                 //StudentName_field
                 const CustomTextFormAuth(
