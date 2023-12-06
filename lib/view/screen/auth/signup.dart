@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/signup_controller.dart';
 import 'package:flutter_application_1/view/widget/auth/customlogoauth.dart';
 import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextformauth.dart';
+import 'package:get/get.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SignUpControllerImp controller = Get.put(SignUpControllerImp());
     return Scaffold(
         appBar: AppBar(
           title: const Text("Sign Up"),
@@ -27,57 +30,63 @@ class SignUp extends StatelessWidget {
                 ),
 
                 //StudentName_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "Full Name*",
                   obscureText: false,
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Your Name',
                   iconData: Icons.numbers,
+                  mycontroller: controller.fullName,
                 ),
 
                 //StudentNumber_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "University Number*",
                   obscureText: false,
                   textInputType: TextInputType.number,
                   hinttext: 'Enter Your Number',
                   iconData: Icons.lock_outline,
+                  mycontroller: controller.registressionNumber,
                 ),
 
                 //department_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "Department*",
                   obscureText: false,
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Department Name',
                   iconData: Icons.lock_outline,
+                  mycontroller: controller.department,
                 ),
 
                 //Address_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "Address-City/Village*",
                   obscureText: false,
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Your Address',
                   iconData: Icons.lock_outline,
+                  mycontroller: controller.address,
                 ),
 
                 //MobileNumber_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "Mobile Number*",
                   obscureText: false,
                   textInputType: TextInputType.phone,
                   hinttext: 'Enter Your Number',
                   iconData: Icons.lock_outline,
+                  mycontroller: controller.mobileNumber,
                 ),
 
                 //password_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "Password*",
                   obscureText: true,
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Your Password',
                   iconData: Icons.lock_outline,
+                  mycontroller: controller.password,
                 ),
 
                 const SizedBox(
