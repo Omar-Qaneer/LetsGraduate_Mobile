@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/login_controller.dart';
 import 'package:flutter_application_1/view/widget/auth/customlogoauth.dart';
 import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextformauth.dart';
+import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -10,6 +12,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String space = "\t\t\t\t\t\t\t\t\t\t";
+    LoginControllerImp controller = Get.put(LoginControllerImp());
     return Scaffold(
         appBar: AppBar(
           title: const Text("Sign In"),
@@ -62,7 +65,9 @@ class Login extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 60),
                   child: CustomTextButtonAuth(
                     textOfTextButton: "Don't have account ?\n$space Sign Up",
-                    onPressed: () {},
+                    onPressed: () {
+                      controller.goToSignUp();
+                    },
                     alignment: Alignment.center,
                   ),
                 )
