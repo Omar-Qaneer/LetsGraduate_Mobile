@@ -31,21 +31,23 @@ class Login extends StatelessWidget {
                 ),
 
                 //registressionNumber_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "Regestression Number*",
                   obscureText: false,
                   textInputType: TextInputType.number,
                   hinttext: 'Enter Your Number',
                   iconData: Icons.numbers,
+                  mycontroller: controller.registressionNumber,
                 ),
 
                 //password_field
-                const CustomTextFormAuth(
+                CustomTextFormAuth(
                   labeltext: "Password*",
                   obscureText: true,
                   textInputType: TextInputType.text,
                   hinttext: 'Enter Your Password',
                   iconData: Icons.lock_outline,
+                  mycontroller: controller.password,
                 ),
 
                 //forgetPassword_button
