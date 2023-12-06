@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/constant/routes.dart';
 import 'package:get/get.dart';
 
 abstract class ForgetPasswordController extends GetxController {
@@ -10,7 +11,9 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
   late TextEditingController email;
 
   @override
-  goToVerifyCode() {}
+  goToVerifyCode() {
+    Get.offNamed(AppRoute.verifyCode);
+  }
 
   @override
   forgetPassword() {}

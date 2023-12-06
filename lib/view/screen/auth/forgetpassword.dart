@@ -46,7 +46,9 @@ class ForgetPassword extends StatelessWidget {
                 //signin_button
                 CustomMaterialButtonAuth(
                   text: "SEND CODE TO EMAIL",
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.goToVerifyCode();
+                  },
                 ),
               ],
             )),
