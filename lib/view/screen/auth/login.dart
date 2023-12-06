@@ -50,7 +50,8 @@ class Login extends StatelessWidget {
 
                 //forgetPassword_button
                 Padding(
-                    padding: const EdgeInsets.only(right: 20),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                     child: CustomTextButtonAuth(
                       textOfTextButton: "Forget Password ?",
                       alignment: Alignment.centerRight,
