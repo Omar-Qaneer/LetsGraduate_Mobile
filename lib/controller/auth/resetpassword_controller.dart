@@ -9,6 +9,7 @@ abstract class ResetPasswordController extends GetxController {
 
 class ResetPasswordControllerImp extends ResetPasswordController {
   late TextEditingController newPassword;
+  late TextEditingController confirmNewPassword;
 
   @override
   goToLogin() {
@@ -21,12 +22,14 @@ class ResetPasswordControllerImp extends ResetPasswordController {
   @override
   void onInit() {
     newPassword = TextEditingController();
+    confirmNewPassword = TextEditingController();
     super.onInit();
   }
 
   @override
   void dispose() {
     newPassword.dispose();
+    confirmNewPassword.dispose();
     super.dispose();
   }
 }
