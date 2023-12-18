@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/auth/verifycode_controller.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:get/get.dart';
 
 class VerifyCode extends StatelessWidget {
   const VerifyCode({super.key});
 
   @override
   Widget build(BuildContext context) {
+    VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
     return Scaffold(
       appBar: AppBar(
         title: const Text("Verification Code"),
@@ -58,7 +61,9 @@ class VerifyCode extends StatelessWidget {
                   //handle validation or checks here
                 },
                 //runs when every textfield is filled
-                onSubmit: (String verificationCode) {}, // end onSubmit
+                onSubmit: (String verificationCode) {
+                  controller.goToResetPassword();
+                }, // end onSubmit
               ),
 
               const SizedBox(

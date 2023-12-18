@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controller/signup_controller.dart';
+import 'package:flutter_application_1/controller/auth/signup_controller.dart';
 import 'package:flutter_application_1/view/widget/auth/customlogoauth.dart';
 import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';

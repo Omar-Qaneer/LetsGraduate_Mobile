@@ -8,14 +8,11 @@ abstract class VerifyCodeController extends GetxController {
 }
 
 class VerifyCodeControllerImp extends VerifyCodeController {
-
   @override
   goToResetPassword() {
-    Get.offNamed(AppRoute.verifyCode);
+    Get.offNamed(AppRoute.resetPassword);
   }
 
   @override
   verifyCode() {}
-
- 
 }
