@@ -63,7 +63,7 @@ class ResetPassword extends StatelessWidget {
               MaterialButton(
                 minWidth: 350,
                 onPressed: () {
-                  controller.goToLogin();
+                  controller.goToSuccessResetPassword();
                 },
                 color: Colors.blue[800],
                 textColor: Colors.white,
