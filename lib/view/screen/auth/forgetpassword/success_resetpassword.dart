@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/auth/successresetpassword_controller.dart';
 import 'package:flutter_application_1/core/constant/imageasset.dart';
 import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
+import 'package:get/get.dart';
 
 class SuccessResetPassword extends StatelessWidget {
   const SuccessResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SuccessResetPasswordControllerImp controller =
+        Get.put(SuccessResetPasswordControllerImp());
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(30),
@@ -32,7 +36,9 @@ class SuccessResetPassword extends StatelessWidget {
               width: double.infinity,
               child: CustomMaterialButtonAuth(
                 text: "Start",
-                onPressed: () {},
+                onPressed: () {
+                  controller.goToLoginPage();
+                },
               ),
             )
           ],

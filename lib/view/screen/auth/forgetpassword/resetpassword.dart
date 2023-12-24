@@ -27,7 +27,7 @@ class ResetPassword extends StatelessWidget {
               //logo_image
               Container(
                 margin: const EdgeInsets.only(top: 60, bottom: 20),
-                child: const CustomLogoAuth(height: 200),
+                child: const CustomLogoAuth(height: 80),
               ),
 
               const SizedBox(
@@ -55,7 +55,7 @@ class ResetPassword extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: 50,
+                height: 60,
               ),
 
               //submitting_button
