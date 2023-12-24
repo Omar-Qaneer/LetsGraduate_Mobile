@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/auth/resetpassword_controller.dart';
+import 'package:flutter_application_1/core/constant/imageasset.dart';
+import 'package:flutter_application_1/view/widget/auth/customlogoauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextformauth.dart';
 import 'package:get/get.dart';
 
@@ -25,10 +27,7 @@ class ResetPassword extends StatelessWidget {
               //logo_image
               Container(
                 margin: const EdgeInsets.only(top: 60, bottom: 20),
-                width: 200,
-                child: Image.asset(
-                  "assets/images/letsgraduate-logo-with-text.png",
-                ),
+                child: const CustomLogoAuth(height: 200),
               ),
 
               const SizedBox(
