@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/constant/imageasset.dart';
 import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 
 class SuccessResetPassword extends StatelessWidget {
@@ -12,23 +13,20 @@ class SuccessResetPassword extends StatelessWidget {
         child: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 110, bottom: 60),
+              padding: EdgeInsets.only(top: 80, bottom: 40),
               child: Text(
-                "Success",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                "Success!",
+                style: TextStyle(fontSize: 40),
               ),
             ),
-            const Center(
-              child: Icon(
-                Icons.check_circle_sharp,
-                size: 200,
-                color: Colors.green,
-              ),
-            ),
+            Center(child: Image.asset(AppImageAsset.successImage)),
             const SizedBox(
               height: 20,
             ),
-            const Text("Registration complete!"),
+            const Text(
+              "Registration complete!",
+              style: TextStyle(fontSize: 18),
+            ),
             const Spacer(),
             SizedBox(
               width: double.infinity,
