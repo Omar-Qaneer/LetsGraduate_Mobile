@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controller/auth/verifycode_controller.dart';
+import 'package:flutter_application_1/controller/auth/signup_controller.dart';
 import 'package:flutter_application_1/view/widget/auth/customlogoauth.dart';
+import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
@@ -10,100 +11,84 @@ class VerifyEmailSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
+    SignUpControllerImp controller = Get.put(SignUpControllerImp());
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Verification Code"),
-        centerTitle: true,
-        elevation: 0.0,
-      ),
       body: ListView(
         children: [
           Form(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              //logo_image
-              Container(
-                margin: const EdgeInsets.only(top: 60, bottom: 20),
-                child: const CustomLogoAuth(height: 100),
-              ),
-
-              const Padding(
-                padding: EdgeInsets.only(bottom: 40),
-                child: Text(
-                  "Check Code",
-                  style: TextStyle(fontSize: 22),
+              child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 30),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Verify your Email address",
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w500),
                 ),
-              ),
-
-              const Padding(
-                padding: EdgeInsets.only(bottom: 40),
-                child: Text(
-                  "Enter the 4 digits verification code received",
-                  style: TextStyle(fontSize: 16),
+                //logo_image
+                Container(
+                  margin: const EdgeInsets.only(top: 60, bottom: 20),
+                  child: const CustomLogoAuth(height: 100),
                 ),
-              ),
 
-              OtpTextField(
-                fieldWidth: 60.0,
-                borderRadius: BorderRadius.circular(20),
-                numberOfFields: 4,
-                enabledBorderColor: Colors.black,
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 40),
+                  child: Text(
+                    "Check Code",
+                    style: TextStyle(fontSize: 22),
+                  ),
+                ),
 
-                borderColor: const Color(0xFF512DA8),
-                //set to true to show as box or false to show as dash
-                showFieldAsBox: true,
-                //runs when a code is typed in
-                onCodeChanged: (String code) {
-                  //handle validation or checks here
-                },
-                //runs when every textfield is filled
-                onSubmit: (String verificationCode) {
-                  controller.goToResetPassword();
-                }, // end onSubmit
-              ),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 40),
+                  child: Text(
+                    "Enter the 4 digits verification code received",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
 
-              const SizedBox(
-                height: 16.0,
-              ),
+                OtpTextField(
+                  fieldWidth: 60.0,
+                  borderRadius: BorderRadius.circular(20),
+                  numberOfFields: 4,
+                  enabledBorderColor: Colors.black,
 
-              // TextButton(
-              //     onPressed: () {},
-              //     child: const Text(
-              //       'Resend Button',
-              //       style: TextStyle(
-              //           fontSize: 14,
-              //           color: Colors.black,
-              //           fontWeight: FontWeight.w700),
-              //     ),
-              //   )
+                  borderColor: const Color(0xFF512DA8),
+                  //set to true to show as box or false to show as dash
+                  showFieldAsBox: true,
+                  //runs when a code is typed in
+                  onCodeChanged: (String code) {
+                    //handle validation or checks here
+                  },
+                  //runs when every textfield is filled
+                  onSubmit: (String verificationCode) {
+                    controller.goToSuccessSignUp();
+                  }, // end onSubmit
+                ),
 
-              const CustomTextButtonAuth(
+                const SizedBox(
+                  height: 16.0,
+                ),
+
+                CustomTextButtonAuth(
                   textOfTextButton: "Resend Button",
-                  alignment: Alignment.center),
-
-              //signin_button
-              MaterialButton(
-                minWidth: 350,
-                onPressed: () {},
-                color: Colors.blue[800],
-                textColor: Colors.white,
-                child: const Text(
-                  "Verify",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(top: 35, left: 25),
-                child: CustomTextButtonAuth(
-                  textOfTextButton: 'Back to Sign In?',
-                  alignment: Alignment.centerLeft,
+                  alignment: Alignment.center,
                   onPressed: () {},
                 ),
-              ),
-            ],
+
+                const SizedBox(
+                  height: 16.0,
+                ),
+
+                CustomMaterialButtonAuth(
+                  text: "Verify",
+                  onPressed: () {},
+                )
+              ],
+            ),
           )),
         ],
       ),

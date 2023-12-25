@@ -6,6 +6,7 @@ abstract class SignUpController extends GetxController
     with GetSingleTickerProviderStateMixin {
   signUp();
   goToVerifyEmailPage();
+  goToSuccessSignUp();
   void setPageIndex(int newIndex);
 }
 
@@ -68,5 +69,10 @@ class SignUpControllerImp extends SignUpController {
   void setPageIndex(int newIndex) {
     currentPageIndex = newIndex;
     update();
+  }
+
+  @override
+  goToSuccessSignUp() {
+    Get.offNamed(AppRoute.successSignUp);
   }
 }

@@ -6,6 +6,7 @@ import 'package:flutter_application_1/view/screen/auth/forgetpassword/resetpassw
 import 'package:flutter_application_1/view/screen/auth/signup.dart';
 import 'package:flutter_application_1/view/screen/auth/forgetpassword/success_resetpassword.dart';
 import 'package:flutter_application_1/view/screen/auth/forgetpassword/verifycode.dart';
+import 'package:flutter_application_1/view/screen/auth/success_signup.dart';
 import 'package:flutter_application_1/view/screen/auth/verifyemailsignup.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
@@ -15,5 +16,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.verifyCode: (context) => const VerifyCode(),
   AppRoute.resetPassword: (context) => const ResetPassword(),
   AppRoute.successResetPassword: (context) => const SuccessResetPassword(),
-  AppRoute.verifyEmailSignUp: (context) => const VerifyEmailSignUp()
+  AppRoute.verifyEmailSignUp: (context) => const VerifyEmailSignUp(),
+  AppRoute.successSignUp: (context) => const SuccessSignUp(),
 };
