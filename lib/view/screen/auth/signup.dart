@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/auth/signup_controller.dart';
 import 'package:flutter_application_1/view/widget/auth/customaccountdetailssignup.dart';
 import 'package:flutter_application_1/view/widget/auth/customlogoauth.dart';
-import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/custompersonalinfosignup.dart';
-import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';
-import 'package:flutter_application_1/view/widget/auth/customtextformauth.dart';
 import 'package:get/get.dart';
 
 class SignUp extends StatelessWidget {
@@ -18,7 +15,7 @@ class SignUp extends StatelessWidget {
       length: 2,
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.grey,
+            backgroundColor: Colors.blue,
             title: const Text("Sign Up"),
             bottom: TabBar(
               controller: controller.tabController,
@@ -51,19 +48,6 @@ class SignUp extends StatelessWidget {
                       ],
                     ),
                   ),
-
-                  // ),
-
-                  // Padding(
-                  //   padding: const EdgeInsets.only(top: 20),
-                  //   child: CustomTextButtonAuth(
-                  //     textOfTextButton: "Already have account ? Sign In",
-                  //     onPressed: () {
-                  //       // controller.goToSignIn();
-                  //     },
-                  //     alignment: Alignment.center,
-                  //   ),
-                  // )
                 ],
               )),
             ],

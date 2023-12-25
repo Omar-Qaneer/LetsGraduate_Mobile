@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 abstract class SignUpController extends GetxController
     with GetSingleTickerProviderStateMixin {
   signUp();
-  goToSignIn();
+  goToVerifyEmailPage();
   void setPageIndex(int newIndex);
 }
 
@@ -26,8 +26,8 @@ class SignUpControllerImp extends SignUpController {
   int currentPageIndex = 0;
 
   @override
-  goToSignIn() {
-    Get.offNamed(AppRoute.login);
+  goToVerifyEmailPage() {
+    Get.offNamed(AppRoute.verifyEmailSignUp);
   }
 
   @override

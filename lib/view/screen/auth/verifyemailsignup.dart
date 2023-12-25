@@ -68,24 +68,20 @@ class VerifyEmailSignUp extends StatelessWidget {
                 height: 16.0,
               ),
 
-              Center(
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Resend Button',
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700),
-                  ),
-                ),
-              ),
+              // TextButton(
+              //     onPressed: () {},
+              //     child: const Text(
+              //       'Resend Button',
+              //       style: TextStyle(
+              //           fontSize: 14,
+              //           color: Colors.black,
+              //           fontWeight: FontWeight.w700),
+              //     ),
+              //   )
 
-              // style: GoogleFonts.urbanist(
-              //         fontSize: 14.0,
-              //         color: Colors.black,
-              //         fontWeight: FontWeight.w700,
-              //       ),
+              const CustomTextButtonAuth(
+                  textOfTextButton: "Resend Button",
+                  alignment: Alignment.center),
 
               //signin_button
               MaterialButton(

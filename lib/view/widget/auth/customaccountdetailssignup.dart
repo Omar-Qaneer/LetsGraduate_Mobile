@@ -50,7 +50,9 @@ class AccountDetailsInfo extends StatelessWidget {
         //signup_button
         CustomMaterialButtonAuth(
           text: "Register now",
-          onPressed: () {},
+          onPressed: () {
+            controller.goToVerifyEmailPage();
+          },
         ),
       ]),
     );
