@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/constant/routes.dart';
 import 'package:get/get.dart';
 
-abstract class SignUpController extends GetxController {
+abstract class SignUpController extends GetxController
+    with GetSingleTickerProviderStateMixin {
   signUp();
   goToSignIn();
+  void setPageIndex(int newIndex);
 }
 
 class SignUpControllerImp extends SignUpController {
+  final List<Tab> signUpTabs = <Tab>[
+    const Tab(icon: Icon(Icons.person), text: "Personal Info"),
+    const Tab(icon: Icon(Icons.lock), text: "Account Details"),
+  ];
+
   late TextEditingController fullName;
   late TextEditingController registressionNumber;
   late TextEditingController department;
@@ -15,6 +22,8 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController mobileNumber;
   late TextEditingController email;
   late TextEditingController password;
+  late TabController tabController;
+  int currentPageIndex = 0;
 
   @override
   goToSignIn() {
@@ -33,6 +42,7 @@ class SignUpControllerImp extends SignUpController {
     mobileNumber = TextEditingController();
     email = TextEditingController();
     password = TextEditingController();
+    tabController = TabController(vsync: this, length: signUpTabs.length);
     super.onInit();
   }
 
@@ -46,5 +56,17 @@ class SignUpControllerImp extends SignUpController {
     email.dispose();
     password.dispose();
     super.dispose();
+  }
+
+  @override
+  void onClose() {
+    tabController.dispose();
+    super.onClose();
+  }
+
+  @override
+  void setPageIndex(int newIndex) {
+    currentPageIndex = newIndex;
+    update();
   }
 }
