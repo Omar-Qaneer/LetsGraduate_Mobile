@@ -19,7 +19,7 @@ class SuccessResetPassword extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(top: 80, bottom: 40),
               child: Text(
-                "Success!",
+                "Verified!",
                 style: TextStyle(fontSize: 40),
               ),
             ),
@@ -28,7 +28,7 @@ class SuccessResetPassword extends StatelessWidget {
               height: 20,
             ),
             const Text(
-              "Registration complete!",
+              "Your account has been\n verified successfully!",
               style: TextStyle(fontSize: 18),
             ),
             const Spacer(),
