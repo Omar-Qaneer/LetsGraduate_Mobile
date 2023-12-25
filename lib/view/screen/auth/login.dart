@@ -65,7 +65,9 @@ class Login extends StatelessWidget {
                 //signin_button
                 CustomMaterialButtonAuth(
                   text: "SIGN IN",
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.goToSupervisorHomeScreen();
+                  },
                 ),
 
                 Padding(

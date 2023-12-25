@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 abstract class LoginController extends GetxController {
   login();
   goToSignUp();
+  goToSupervisorHomeScreen();
   goToForgetPassword();
 }
 
@@ -37,5 +38,10 @@ class LoginControllerImp extends LoginController {
   @override
   goToForgetPassword() {
     Get.toNamed(AppRoute.forgetPassword);
+  }
+
+  @override
+  goToSupervisorHomeScreen() {
+    Get.offAllNamed(AppRoute.supervisorHomeScreen);
   }
 }
