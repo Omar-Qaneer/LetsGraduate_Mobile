@@ -13,6 +13,7 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController department;
   late TextEditingController address;
   late TextEditingController mobileNumber;
+  late TextEditingController email;
   late TextEditingController password;
 
   @override
@@ -30,6 +31,7 @@ class SignUpControllerImp extends SignUpController {
     department = TextEditingController();
     address = TextEditingController();
     mobileNumber = TextEditingController();
+    email = TextEditingController();
     password = TextEditingController();
     super.onInit();
   }
@@ -41,6 +43,7 @@ class SignUpControllerImp extends SignUpController {
     department.dispose();
     address.dispose();
     mobileNumber.dispose();
+    email.dispose();
     password.dispose();
     super.dispose();
   }
