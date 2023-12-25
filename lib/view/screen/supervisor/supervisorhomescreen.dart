@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/supervisor/supervisorhomescreen_controller.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customsnavbarsupervisor.dart';
 import 'package:get/get.dart';
 
 class SupervisorHomeScreen extends StatelessWidget {
@@ -34,8 +35,12 @@ class SupervisorHomeScreen extends StatelessWidget {
                       label: "Setting",
                     ),
                   ]),
+              drawer: const CustomNavBarSupervisor(),
               appBar: AppBar(
                 title: const Text("Let's Graduate"),
+                backgroundColor: Colors.blue,
+                elevation: 0.0,
+                centerTitle: true,
                 actions: [
                   IconButton(
                       onPressed: () {}, icon: const Icon(Icons.notifications)),
