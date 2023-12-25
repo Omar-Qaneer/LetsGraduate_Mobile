@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/auth/verifycode_controller.dart';
+import 'package:flutter_application_1/view/widget/auth/custommaterialbuttonauth.dart';
 import 'package:flutter_application_1/view/widget/auth/customtextbuttonauth.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
@@ -90,25 +91,10 @@ class VerifyCode extends StatelessWidget {
               //       ),
 
               //signin_button
-              MaterialButton(
-                minWidth: 350,
+              CustomMaterialButtonAuth(
+                text: "Verify",
                 onPressed: () {},
-                color: Colors.blue[800],
-                textColor: Colors.white,
-                child: const Text(
-                  "Verify",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(top: 35, left: 25),
-                child: CustomTextButtonAuth(
-                  textOfTextButton: 'Back to Sign In?',
-                  alignment: Alignment.centerLeft,
-                  onPressed: () {},
-                ),
-              ),
+              )
             ],
           )),
         ],
