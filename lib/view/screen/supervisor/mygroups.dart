@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customlisttilesupervisor.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customtextsupervisor.dart';
-import 'package:flutter_application_1/view/widget/supervisor/customtrailingsupervisor.dart';
 
 class SupervisorGroups extends StatelessWidget {
   const SupervisorGroups({super.key});
@@ -78,35 +78,7 @@ class SupervisorGroups extends StatelessWidget {
           shrinkWrap: true,
           itemCount: groups.length,
           itemBuilder: (context, index) {
-            final group = groups[index];
-            final String groupLength = group.length.toString();
-            return ListTile(
-              leading: CircleAvatar(
-                radius: 25,
-                backgroundColor: const Color(0xff764abc),
-                child: Text(
-                  group.elementAt(0)['name'].toString().substring(0, 1),
-                  style: const TextStyle(fontSize: 25, color: Colors.white),
-                ),
-              ),
-              title: Text(
-                "Group $index",
-                style: const TextStyle(fontSize: 16),
-              ),
-              subtitle: Row(
-                children: [
-                  const Icon(Icons.groups),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    "$groupLength members",
-                    style: const TextStyle(fontSize: 10),
-                  ),
-                ],
-              ),
-              trailing: CustomTrailingSupervisor(index: index, group: group),
-            );
+            return CustomListTileSupervisor(index: index, groups: groups);
           },
           separatorBuilder: (BuildContext context, int index) {
             return const Divider();
