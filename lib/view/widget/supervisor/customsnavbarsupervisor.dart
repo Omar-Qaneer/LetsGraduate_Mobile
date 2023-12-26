@@ -42,6 +42,7 @@ class CustomNavBarSupervisor extends StatelessWidget {
                     subtitle: const Text("Information & Details"),
                     onTap: () {
                       controller.changePage(1);
+                      controller.listPage.elementAt(controller.currentPage);
                     },
                   ),
                   ListTile(
