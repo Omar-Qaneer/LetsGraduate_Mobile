@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/supervisor/mygroups_controller.dart';
+import 'package:get/get.dart';
 
 class CustomTrailingSupervisor extends StatelessWidget {
   final int index;
@@ -8,12 +10,15 @@ class CustomTrailingSupervisor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MyGroupsControllerImp controller = Get.put(MyGroupsControllerImp());
     return MaterialButton(
       padding: const EdgeInsets.symmetric(vertical: 5),
       color: Colors.grey[300],
       textColor: Colors.black,
       shape: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-      onPressed: () {},
+      onPressed: () {
+        controller.goToGroupDetailsPage(group);
+      },
       child: const Text("more info"),
     );
   }

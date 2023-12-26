@@ -8,6 +8,7 @@ import 'package:flutter_application_1/view/screen/auth/forgetpassword/success_re
 import 'package:flutter_application_1/view/screen/auth/forgetpassword/verifycode.dart';
 import 'package:flutter_application_1/view/screen/auth/success_signup.dart';
 import 'package:flutter_application_1/view/screen/auth/verifyemailsignup.dart';
+import 'package:flutter_application_1/view/screen/supervisor/groupdetails.dart';
 import 'package:flutter_application_1/view/screen/supervisor/supervisorhomescreen.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
@@ -20,4 +21,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.verifyEmailSignUp: (context) => const VerifyEmailSignUp(),
   AppRoute.successSignUp: (context) => const SuccessSignUp(),
   AppRoute.supervisorHomeScreen: (context) => const SupervisorHomeScreen(),
+  AppRoute.groupDetails: (context) => const GroupDetails(),
 };
