@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customtextsupervisor.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customtrailingsupervisor.dart';
 
 class SupervisorGroups extends StatelessWidget {
   const SupervisorGroups({super.key});
@@ -81,11 +82,11 @@ class SupervisorGroups extends StatelessWidget {
             final String groupLength = group.length.toString();
             return ListTile(
               leading: CircleAvatar(
-                radius: 30,
+                radius: 25,
                 backgroundColor: const Color(0xff764abc),
                 child: Text(
                   group.elementAt(0)['name'].toString().substring(0, 1),
-                  style: const TextStyle(fontSize: 30, color: Colors.white),
+                  style: const TextStyle(fontSize: 25, color: Colors.white),
                 ),
               ),
               title: Text(
@@ -104,6 +105,7 @@ class SupervisorGroups extends StatelessWidget {
                   ),
                 ],
               ),
+              trailing: CustomTrailingSupervisor(index: index, group: group),
             );
           },
           separatorBuilder: (BuildContext context, int index) {
