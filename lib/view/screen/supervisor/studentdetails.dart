@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customtextformfieldsupervisor.dart';
 import 'package:get/get.dart';
 
 class StudentDetails extends StatelessWidget {
@@ -39,92 +40,26 @@ class StudentDetails extends StatelessWidget {
               height: 40,
             ),
 
-            TextFormField(
-              initialValue: student['email'],
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  color: Colors.black),
-              enabled: false,
-              decoration: const InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                  labelText: "Email Address"),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
+            CustomTextFormFieldSupervisor(
+                labeltext: "Email Address", initialValue: student['email']),
 
-            TextFormField(
-              initialValue: student['number'].toString(),
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  color: Colors.black),
-              enabled: false,
-              decoration: const InputDecoration(
-                contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                label: Text("Registression Number"),
-              ),
-            ),
+            CustomTextFormFieldSupervisor(
+                labeltext: "Registression Number",
+                initialValue: student['number'].toString()),
 
-            const SizedBox(
-              height: 30,
-            ),
+            CustomTextFormFieldSupervisor(
+                labeltext: "Department", initialValue: student['department']),
 
-            TextFormField(
-              initialValue: student['department'].toString(),
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  color: Colors.black),
-              enabled: false,
-              decoration: const InputDecoration(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-                label: Text("Department"),
-              ),
-            ),
+            CustomTextFormFieldSupervisor(
+                labeltext: "Address-City/Village",
+                initialValue: student['address']),
 
-            const SizedBox(
-              height: 30,
-            ),
-
-            TextFormField(
-              initialValue: student['address'].toString(),
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  color: Colors.black),
-              enabled: false,
-              decoration: const InputDecoration(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-                label: Text("Address-City/Village"),
-              ),
-            ),
-
-            const SizedBox(
-              height: 30,
-            ),
-
-            TextFormField(
-              initialValue: student['mobileNumber'].toString(),
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  color: Colors.black),
-              enabled: false,
-              decoration: const InputDecoration(
-                contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                label: Text("Mobile Number"),
-              ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
+            CustomTextFormFieldSupervisor(
+                labeltext: "Mobile Number",
+                initialValue: student['mobileNumber'].toString()),
 
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 30),
+              margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               child: MaterialButton(
                   shape: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20)),
