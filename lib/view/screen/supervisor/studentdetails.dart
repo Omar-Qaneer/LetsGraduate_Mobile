@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/widget/supervisor/custommaterialbutton.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customtextformfieldsupervisor.dart';
 import 'package:get/get.dart';
 
@@ -58,24 +59,13 @@ class StudentDetails extends StatelessWidget {
                 labeltext: "Mobile Number",
                 initialValue: student['mobileNumber'].toString()),
 
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-              child: MaterialButton(
-                  shape: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: Colors.blue[800],
-                  textColor: Colors.white,
-                  onPressed: () {
-                    Get.back();
-                  },
-                  child: const Text(
-                    "Back",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )),
-            ),
+            CustomMaterialButtonSupervisor(
+              text: "Back",
+              vertical: 25,
+              onPressed: () {
+                Get.back();
+              },
+            )
           ],
         ),
       ),
