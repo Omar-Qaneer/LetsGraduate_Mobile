@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/supervisor/mygroups_controller.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customsearchbar.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customtextsupervisor.dart';
 import 'package:get/get.dart';
@@ -8,6 +9,7 @@ class GroupDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MyGroupsControllerImp controller = Get.find();
     final group = Get.arguments;
     return Scaffold(
         appBar: AppBar(
@@ -33,7 +35,9 @@ class GroupDetails extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final student = group.elementAt(index);
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      controller.goToStudentDetailsPage(student);
+                    },
                     child: ListTile(
                       leading: CircleAvatar(
                           radius: 25,
