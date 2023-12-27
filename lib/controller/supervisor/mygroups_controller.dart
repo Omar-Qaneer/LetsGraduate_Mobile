@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 abstract class MyGroupsController extends GetxController {
   goToGroupDetailsPage(Set<Map<String, Object>> group);
-  goToStudentDetailsPage(dynamic student);
+  goToStudentDetailsPage(Map<String, Object> student);
 }
 
 class MyGroupsControllerImp extends MyGroupsController {
@@ -13,7 +13,7 @@ class MyGroupsControllerImp extends MyGroupsController {
   }
 
   @override
-  goToStudentDetailsPage(dynamic student) {
+  goToStudentDetailsPage(Map<String, Object> student) {
     Get.toNamed(AppRoute.studentDetails, arguments: student);
   }
 }
