@@ -8,6 +8,7 @@ import 'package:flutter_application_1/view/screen/auth/forgetpassword/success_re
 import 'package:flutter_application_1/view/screen/auth/forgetpassword/verifycode.dart';
 import 'package:flutter_application_1/view/screen/auth/success_signup.dart';
 import 'package:flutter_application_1/view/screen/auth/verifyemailsignup.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluategroups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/groupdetails.dart';
 import 'package:flutter_application_1/view/screen/supervisor/studentdetails.dart';
 import 'package:flutter_application_1/view/screen/supervisor/supervisorhomescreen.dart';
@@ -24,4 +25,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.supervisorHomeScreen: (context) => const SupervisorHomeScreen(),
   AppRoute.groupDetails: (context) => const GroupDetails(),
   AppRoute.studentDetails: (context) => const StudentDetails(),
+  AppRoute.evaluateGroups: (context) => const EvaluateGroups(),
 };
