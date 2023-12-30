@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/supervisor/evaluategroups_controller.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customlistviewevaluategroups.dart';
-import 'package:flutter_application_1/view/widget/supervisor/customrowevaluategroups.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customrowsupervisor.dart';
 import 'package:get/get.dart';
 
 class EvaluateGroups extends StatelessWidget {
@@ -266,11 +266,19 @@ class EvaluateGroups extends StatelessWidget {
       },
     ];
     Get.put(EvaluateGroupsControllerImp());
+    int notEvaluated = 3;
+    int evaluated = 3;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: ListView(
         children: [
-          const CustomRowEvaluatGroups(),
+          CustomRowSupervisor(
+            pageName: 'EvaluatGroups',
+            labelFirstButton: 'Not Evaluated: ',
+            textFirstButton: '$notEvaluated',
+            labelSecondButton: 'Evaluated: ',
+            textSecondButton: '$evaluated',
+          ),
           GetBuilder<EvaluateGroupsControllerImp>(
             builder: (controller) => Visibility(
                 child: CustomListViewEvaluatGroups(
