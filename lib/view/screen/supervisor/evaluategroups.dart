@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/supervisor/evaluategroups_controller.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customlistviewevaluategroups.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customrowevaluategroups.dart';
 import 'package:get/get.dart';
 
@@ -268,8 +269,20 @@ class EvaluateGroups extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: ListView(
-        children: const [
-          CustomRowEvaluatGroups(),
+        children: [
+          const CustomRowEvaluatGroups(),
+          GetBuilder<EvaluateGroupsControllerImp>(
+            builder: (controller) => Visibility(
+                child: CustomListViewEvaluatGroups(
+              containerColor:
+                  controller.selectedButton == 1 ? Colors.green : Colors.orange,
+              textColor:
+                  controller.selectedButton == 1 ? Colors.blue : Colors.red,
+              groups: controller.selectedButton == 1
+                  ? evaluatedGroups
+                  : notEvaluatedGroups,
+            )),
+          )
         ],
       ),
     );
