@@ -29,6 +29,7 @@ class SupervisorHomeScreenControllerImp extends SupervisorHomeScreenController {
       ],
     ),
     const EvaluateGroups(),
+    const Submissions()
   ];
   @override
   changePage(int index) {
