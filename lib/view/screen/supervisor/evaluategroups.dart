@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/supervisor/evaluategroups_controller.dart';
-import 'package:flutter_application_1/view/widget/supervisor/customlistviewevaluategroups.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customlistviewsupervisor.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customrowsupervisor.dart';
 import 'package:get/get.dart';
 
@@ -281,7 +281,7 @@ class EvaluateGroups extends StatelessWidget {
           ),
           GetBuilder<EvaluateGroupsControllerImp>(
             builder: (controller) => Visibility(
-                child: CustomListViewEvaluatGroups(
+                child: CustomListViewSupervisor(
               containerColor:
                   controller.selectedButton == 1 ? Colors.green : Colors.orange,
               textColor:

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomListViewEvaluatGroups extends StatelessWidget {
+class CustomListViewSupervisor extends StatelessWidget {
   final dynamic groups;
   final Color containerColor;
   final Color textColor;
-  const CustomListViewEvaluatGroups(
+  const CustomListViewSupervisor(
       {super.key,
       required this.groups,
       required this.containerColor,
