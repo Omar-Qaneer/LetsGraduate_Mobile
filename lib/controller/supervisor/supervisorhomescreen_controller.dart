@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluategroups.dart';
-import 'package:flutter_application_1/view/screen/supervisor/mygroups.dart';
+import 'package:flutter_application_1/view/screen/supervisor/mygroups/mygroups.dart';
+import 'package:flutter_application_1/view/screen/supervisor/submissions.dart';
 import 'package:get/get.dart';
 
 abstract class SupervisorHomeScreenController extends GetxController {
@@ -27,7 +28,7 @@ class SupervisorHomeScreenControllerImp extends SupervisorHomeScreenController {
         ),
       ],
     ),
-    const EvaluateGroups()
+    const EvaluateGroups(),
   ];
   @override
   changePage(int index) {
