@@ -268,31 +268,42 @@ class EvaluateGroups extends StatelessWidget {
     Get.put(EvaluateGroupsControllerImp());
     int notEvaluated = 3;
     int evaluated = 3;
+
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: ListView(
-        children: [
-          CustomRowSupervisor(
-            pageName: 'EvaluatGroups',
-            labelFirstButton: 'Not Evaluated: ',
-            textFirstButton: '$notEvaluated',
-            labelSecondButton: 'Evaluated: ',
-            textSecondButton: '$evaluated',
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: GetBuilder<EvaluateGroupsControllerImp>(
+          builder: (controller) => ListView(
+            children: [
+              CustomRowSupervisor(
+                labelFirstButton: 'Not Evaluated: ',
+                textFirstButton: '$notEvaluated',
+                labelSecondButton: 'Evaluated: ',
+                textSecondButton: '$evaluated',
+                firstButtonColor: controller.buttonColorProperty(0),
+                firstButtonTextColor: controller.buttonColorProperty(1),
+                secondButtonColor: controller.buttonColorProperty(2),
+                secondButtonTextColor: controller.buttonColorProperty(3),
+                onPressed1: () {
+                  controller.setSelectedButton(0);
+                },
+                onPressed2: () {
+                  controller.setSelectedButton(1);
+                },
+              ),
+              Visibility(
+                  child: CustomListViewSupervisor(
+                containerColor: controller.evaluteGroupsSelectedButton == 1
+                    ? Colors.green
+                    : Colors.orange,
+                textColor: controller.evaluteGroupsSelectedButton == 1
+                    ? Colors.blue
+                    : Colors.red,
+                groups: controller.evaluteGroupsSelectedButton == 1
+                    ? evaluatedGroups
+                    : notEvaluatedGroups,
+              )),
+            ],
           ),
-          GetBuilder<EvaluateGroupsControllerImp>(
-            builder: (controller) => Visibility(
-                child: CustomListViewSupervisor(
-              containerColor:
-                  controller.selectedButton == 1 ? Colors.green : Colors.orange,
-              textColor:
-                  controller.selectedButton == 1 ? Colors.blue : Colors.red,
-              groups: controller.selectedButton == 1
-                  ? evaluatedGroups
-                  : notEvaluatedGroups,
-            )),
-          )
-        ],
-      ),
-    );
+        ));
   }
 }

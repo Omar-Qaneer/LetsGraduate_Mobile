@@ -270,31 +270,39 @@ class Submissions extends StatelessWidget {
     Get.put(SubmissionsControllerImp());
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: ListView(
-        children: [
-          CustomRowSupervisor(
-            pageName: 'Submissions',
-            labelFirstButton: 'Not Submitted: ',
-            textFirstButton: '$notSubmitted',
-            labelSecondButton: 'Submitted',
-            textSecondButton: '$submitted',
-          ),
-          GetBuilder<SubmissionsControllerImp>(
-            builder: (controller) => Visibility(
-                child: CustomListViewSupervisor(
-              containerColor: controller.selectedButtonSubmissions == 1
-                  ? Colors.green
-                  : Colors.orange,
-              textColor: controller.selectedButtonSubmissions == 1
-                  ? Colors.blue
-                  : Colors.red,
-              groups: controller.selectedButtonSubmissions == 1
-                  ? submittedGroups
-                  : notSubmittedGroups,
-            )),
-          )
-        ],
-      ),
+      child: GetBuilder<SubmissionsControllerImp>(
+          builder: (controller) => ListView(
+                children: [
+                  CustomRowSupervisor(
+                    labelFirstButton: 'Not Submitted: ',
+                    textFirstButton: '$notSubmitted',
+                    labelSecondButton: 'Submitted',
+                    textSecondButton: '$submitted',
+                    firstButtonColor: controller.buttonColorProperty(0),
+                    firstButtonTextColor: controller.buttonColorProperty(1),
+                    secondButtonColor: controller.buttonColorProperty(2),
+                    secondButtonTextColor: controller.buttonColorProperty(3),
+                    onPressed1: () {
+                      controller.setSelectedButton(0);
+                    },
+                    onPressed2: () {
+                      controller.setSelectedButton(1);
+                    },
+                  ),
+                  Visibility(
+                      child: CustomListViewSupervisor(
+                    containerColor: controller.submissionsSelectedButton == 1
+                        ? Colors.green
+                        : Colors.orange,
+                    textColor: controller.submissionsSelectedButton == 1
+                        ? Colors.blue
+                        : Colors.red,
+                    groups: controller.submissionsSelectedButton == 1
+                        ? submittedGroups
+                        : notSubmittedGroups,
+                  )),
+                ],
+              )),
     );
   }
 }
