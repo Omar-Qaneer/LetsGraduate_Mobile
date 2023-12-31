@@ -4,11 +4,14 @@ class CustomListViewSupervisor extends StatelessWidget {
   final dynamic groups;
   final Color containerColor;
   final Color textColor;
+  final String pageName;
+
   const CustomListViewSupervisor(
       {super.key,
       required this.groups,
       required this.containerColor,
-      required this.textColor});
+      required this.textColor,
+      required this.pageName});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +21,12 @@ class CustomListViewSupervisor extends StatelessWidget {
       itemCount: groups.length,
       itemBuilder: (context, index) {
         final group = groups[index];
-        final supervisorName = group.elementAt(0);
-        final student = group.elementAt(1);
+        final supervisorObject = group.elementAt(0);
+        final supervisorName = supervisorObject['supervisorName'].toString();
+        final projectObject = group.elementAt(1);
+        final projectName = projectObject['projectName'].toString();
+        final student = group.elementAt(3);
+        final submissionStatus = group.elementAt(2);
         return Container(
           margin: const EdgeInsets.only(bottom: 10),
           child: Card(
@@ -48,7 +55,9 @@ class CustomListViewSupervisor extends StatelessWidget {
                           style:
                               const TextStyle(color: Colors.grey, fontSize: 12),
                         ),
-                        Text(supervisorName['supervisorName'].toString())
+                        Text((pageName == "Submissions"
+                            ? projectName
+                            : supervisorName))
                       ],
                     ),
                   ),
@@ -67,7 +76,9 @@ class CustomListViewSupervisor extends StatelessWidget {
                           style: TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                         Text(
-                          student['evaluateStatus'].toString(),
+                          pageName == "Submissions"
+                              ? submissionStatus['submissionStatus'].toString()
+                              : student['evaluateStatus'].toString(),
                           style: TextStyle(color: textColor),
                         )
                       ],

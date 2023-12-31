@@ -12,6 +12,8 @@ class Submissions extends StatelessWidget {
     final notSubmittedGroups = [
       {
         {"supervisorName": "Abdallah Rashed"},
+        {"projectName": "Wheel Chair"},
+        {"submissionStatus": "Not Submitted"},
         {
           "name": 'Obaida Aws',
           "number": 119236866,
@@ -33,6 +35,8 @@ class Submissions extends StatelessWidget {
       },
       {
         {"supervisorName": "Haya Samaana"},
+        {"projectName": "Mohito Maker Machine"},
+        {"submissionStatus": "Not Submitted"},
         {
           "name": 'Ahmad Majed',
           "number": 11924055,
@@ -54,6 +58,8 @@ class Submissions extends StatelessWidget {
       },
       {
         {"supervisorName": "Amjad AbuHassan"},
+        {"projectName": "Delivery System"},
+        {"submissionStatus": "Not Submitted"},
         {
           "name": 'Rami Mani',
           "number": 11924055,
@@ -77,6 +83,8 @@ class Submissions extends StatelessWidget {
     final submittedGroups = [
       {
         {"supervisorName": "Aladdin Masri"},
+        {"projectName": "Roadway Artist"},
+        {"submissionStatus": "Submitted"},
         {
           "name": 'Omar Quzmar',
           "number": 11924055,
@@ -98,6 +106,8 @@ class Submissions extends StatelessWidget {
       },
       {
         {"supervisorName": "Samer Arandi"},
+        {"projectName": "Braille Printer"},
+        {"submissionStatus": "Submitted"},
         {
           "name": 'Noor-Aldeen Abu-Shehadeh',
           "number": 11924055,
@@ -119,132 +129,8 @@ class Submissions extends StatelessWidget {
       },
       {
         {"supervisorName": "Manar Qamhieh"},
-        {
-          "name": 'Omar Qaneer',
-          "number": 11925044,
-          "department": 'Computer Engineering',
-          "email": 'omarqaner@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Nablus',
-          "evaluateStatus": "Evaluated",
-        },
-        {
-          "name": 'Jamal SaadEddin',
-          "number": 12345678,
-          "department": 'Computer Engineering',
-          "email": 'jamal@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Nablus',
-          "evaluateStatus": "Evaluated",
-        }
-      },
-      {
-        {"supervisorName": "Aladdin Masri"},
-        {
-          "name": 'Omar Quzmar',
-          "number": 11924055,
-          "department": 'Computer Engineering',
-          "email": 'omarquzmar@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Jenin',
-          "evaluateStatus": "Evaluated",
-        },
-        {
-          "name": 'Yahia Arafat',
-          "number": 11825047,
-          "department": 'Computer Engineering',
-          "email": 'yahiaarafat@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Asira',
-          "evaluateStatus": "Evaluated",
-        }
-      },
-      {
-        {"supervisorName": "Samer Arandi"},
-        {
-          "name": 'Noor-Aldeen Abu-Shehadeh',
-          "number": 11924055,
-          "department": 'Computer Engineering',
-          "email": 'nooraldeen@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Hwara',
-          "evaluateStatus": "Evaluated",
-        },
-        {
-          "name": 'Momen Odeh',
-          "number": 11825047,
-          "department": 'Computer Engineering',
-          "email": 'momenodeh@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Hwara',
-          "evaluateStatus": "Evaluated",
-        }
-      },
-      {
-        {"supervisorName": "Manar Qamhieh"},
-        {
-          "name": 'Omar Qaneer',
-          "number": 11925044,
-          "department": 'Computer Engineering',
-          "email": 'omarqaner@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Nablus',
-          "evaluateStatus": "Evaluated",
-        },
-        {
-          "name": 'Jamal SaadEddin',
-          "number": 12345678,
-          "department": 'Computer Engineering',
-          "email": 'jamal@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Nablus',
-          "evaluateStatus": "Evaluated",
-        }
-      },
-      {
-        {"supervisorName": "Aladdin Masri"},
-        {
-          "name": 'Omar Quzmar',
-          "number": 11924055,
-          "department": 'Computer Engineering',
-          "email": 'omarquzmar@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Jenin',
-          "evaluateStatus": "Evaluated",
-        },
-        {
-          "name": 'Yahia Arafat',
-          "number": 11825047,
-          "department": 'Computer Engineering',
-          "email": 'yahiaarafat@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Asira',
-          "evaluateStatus": "Evaluated",
-        }
-      },
-      {
-        {"supervisorName": "Samer Arandi"},
-        {
-          "name": 'Noor-Aldeen Abu-Shehadeh',
-          "number": 11924055,
-          "department": 'Computer Engineering',
-          "email": 'nooraldeen@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Hwara',
-          "evaluateStatus": "Evaluated",
-        },
-        {
-          "name": 'Momen Odeh',
-          "number": 11825047,
-          "department": 'Computer Engineering',
-          "email": 'momenodeh@gmail.co',
-          "mobileNumber": 05954698745,
-          "address": 'Hwara',
-          "evaluateStatus": "Evaluated",
-        }
-      },
-      {
-        {"supervisorName": "Manar Qamhieh"},
+        {"projectName": "Let's Graduate"},
+        {"submissionStatus": "Submitted"},
         {
           "name": 'Omar Qaneer',
           "number": 11925044,
@@ -300,6 +186,7 @@ class Submissions extends StatelessWidget {
                     groups: controller.submissionsSelectedButton == 1
                         ? submittedGroups
                         : notSubmittedGroups,
+                    pageName: 'Submissions',
                   )),
                 ],
               )),
