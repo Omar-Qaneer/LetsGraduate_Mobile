@@ -43,7 +43,13 @@ class SupervisorHomeScreen extends StatelessWidget {
                 centerTitle: true,
                 actions: [
                   IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.notifications)),
+                      onPressed: () {
+                        controller.changePage(5);
+                      },
+                      icon: const Icon(
+                        Icons.notifications,
+                        color: Colors.white,
+                      )),
                   IconButton(
                       onPressed: () {}, icon: const Icon(Icons.account_circle)),
                 ],

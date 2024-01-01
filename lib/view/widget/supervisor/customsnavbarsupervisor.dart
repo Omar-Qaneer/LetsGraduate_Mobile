@@ -34,7 +34,10 @@ class CustomNavBarSupervisor extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.notifications),
                     title: const Text("Notifications"),
-                    onTap: () {},
+                    onTap: () {
+                      controller.changePage(5);
+                      controller.listPage.elementAt(controller.currentPage);
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.group_sharp),
