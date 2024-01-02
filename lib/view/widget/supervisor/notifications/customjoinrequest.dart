@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/widget/supervisor/notifications/custom_notification_content.dart';
 import 'package:flutter_application_1/view/widget/supervisor/notifications/custombuttons_acceptanddecline.dart';
 import 'package:get/get.dart';
 
@@ -37,22 +38,9 @@ class CustomJoinRequest extends StatelessWidget {
                       size: joinType == "group" ? 50 : 35,
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  RichText(
-                    text: TextSpan(
-                      text: senderName, // Text with different font
-                      style: const TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.w900),
-                      children: [
-                        TextSpan(
-                          text: notificationContent, // Remaining text
-                          style: const TextStyle(fontWeight: FontWeight.w400),
-                        ),
-                      ],
-                    ),
-                  ),
+                  CustomNotificationContent(
+                      senderName: senderName,
+                      notificationContent: notificationContent)
                 ],
               ),
               Row(
