@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomNotificationContent extends StatelessWidget {
-  final String senderName;
+  final String notificationSender;
   final String notificationContent;
   const CustomNotificationContent(
-      {super.key, required this.senderName, required this.notificationContent});
+      {super.key,
+      required this.notificationSender,
+      required this.notificationContent});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class CustomNotificationContent extends StatelessWidget {
       padding: const EdgeInsets.only(left: 15),
       child: RichText(
         text: TextSpan(
-          text: senderName, // Text with different font
+          text: notificationSender, // Text with different font
           style:
               const TextStyle(color: Colors.black, fontWeight: FontWeight.w900),
           children: [

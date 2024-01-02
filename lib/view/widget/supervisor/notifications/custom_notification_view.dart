@@ -4,16 +4,16 @@ import 'package:flutter_application_1/view/widget/supervisor/notifications/custo
 import 'package:get/get.dart';
 
 class CustomJoinRequest extends StatelessWidget {
-  final String senderName;
+  final String notificationSender;
   final String notificationContent;
   final String notificationDuration;
-  final String joinType;
+  final String notificationType;
   const CustomJoinRequest(
       {super.key,
-      required this.senderName,
+      required this.notificationSender,
       required this.notificationContent,
       required this.notificationDuration,
-      required this.joinType});
+      required this.notificationType});
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +32,14 @@ class CustomJoinRequest extends StatelessWidget {
                   CircleAvatar(
                     radius: 25,
                     child: Icon(
-                      joinType == "group"
+                      notificationType == "group"
                           ? Icons.account_circle
                           : Icons.group_add_sharp,
-                      size: joinType == "group" ? 50 : 35,
+                      size: notificationType == "group" ? 50 : 35,
                     ),
                   ),
                   CustomNotificationContent(
-                      senderName: senderName,
+                      notificationSender: notificationSender,
                       notificationContent: notificationContent)
                 ],
               ),

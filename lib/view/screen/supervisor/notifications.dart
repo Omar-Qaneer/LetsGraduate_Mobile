@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/view/widget/supervisor/notifications/customjoinrequest.dart';
+import 'package:flutter_application_1/view/widget/supervisor/notifications/custom_notification_view.dart';
 
 class Notifications extends StatelessWidget {
   const Notifications({super.key});
@@ -29,10 +29,10 @@ class Notifications extends StatelessWidget {
                 height: 10,
               ),
               const CustomJoinRequest(
-                senderName: 'Jamal SaadEldeen ',
+                notificationSender: 'Jamal SaadEldeen ',
                 notificationContent: 'is requesting to join \nyour group',
                 notificationDuration: '2 hours ago',
-                joinType: 'group',
+                notificationType: 'group',
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
@@ -42,32 +42,18 @@ class Notifications extends StatelessWidget {
                 ),
               ),
               const CustomJoinRequest(
-                senderName: 'Group 1 ',
+                notificationSender: 'Group 1 ',
                 notificationContent:
                     'is requesting you to supervise \nthier group',
                 notificationDuration: 'Mon at 7:03 AM',
-                joinType: 'supevisor',
+                notificationType: 'supevisor',
               ),
               const CustomJoinRequest(
-                senderName: 'Group 1 ',
+                notificationSender: 'Group 1 ',
                 notificationContent:
                     'is requesting you to supervise \nthier group',
                 notificationDuration: 'Mon at 7:03 AM',
-                joinType: 'supevisor',
-              ),
-              const CustomJoinRequest(
-                senderName: 'Group 1 ',
-                notificationContent:
-                    'is requesting you to supervise \nthier group',
-                notificationDuration: 'Mon at 7:03 AM',
-                joinType: 'supevisor',
-              ),
-              const CustomJoinRequest(
-                senderName: 'Group 1 ',
-                notificationContent:
-                    'is requesting you to supervise \nthier group',
-                notificationDuration: 'Mon at 7:03 AM',
-                joinType: 'supevisor',
+                notificationType: 'supevisor',
               ),
             ],
           ),
