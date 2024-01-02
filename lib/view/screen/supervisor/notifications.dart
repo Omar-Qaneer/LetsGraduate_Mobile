@@ -22,11 +22,17 @@ class Notifications extends StatelessWidget {
                 height: 30,
               ),
               const Text(
-                "New",
+                "Today",
                 style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(
                 height: 10,
+              ),
+              const CustomJoinRequest(
+                senderName: 'Jamal SaadEldeen ',
+                notificationContent: 'is requesting to join \nyour group',
+                notificationDuration: '2 hours ago',
+                joinType: 'group',
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
@@ -34,6 +40,34 @@ class Notifications extends StatelessWidget {
                   "Before That",
                   style: TextStyle(color: Colors.grey),
                 ),
+              ),
+              const CustomJoinRequest(
+                senderName: 'Group 1 ',
+                notificationContent:
+                    'is requesting you to supervise \nthier group',
+                notificationDuration: 'Mon at 7:03 AM',
+                joinType: 'supevisor',
+              ),
+              const CustomJoinRequest(
+                senderName: 'Group 1 ',
+                notificationContent:
+                    'is requesting you to supervise \nthier group',
+                notificationDuration: 'Mon at 7:03 AM',
+                joinType: 'supevisor',
+              ),
+              const CustomJoinRequest(
+                senderName: 'Group 1 ',
+                notificationContent:
+                    'is requesting you to supervise \nthier group',
+                notificationDuration: 'Mon at 7:03 AM',
+                joinType: 'supevisor',
+              ),
+              const CustomJoinRequest(
+                senderName: 'Group 1 ',
+                notificationContent:
+                    'is requesting you to supervise \nthier group',
+                notificationDuration: 'Mon at 7:03 AM',
+                joinType: 'supevisor',
               ),
             ],
           ),
