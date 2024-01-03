@@ -42,6 +42,27 @@ class ProfileSupervisor extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(
+            height: 40,
+          ),
+
+          CustomTextFormFieldSupervisor(
+              labeltext: "Email Address", initialValue: supervisor['email']),
+
+          CustomTextFormFieldSupervisor(
+              labeltext: "Academic Number",
+              initialValue: supervisor['academicNumber'].toString()),
+
+          CustomTextFormFieldSupervisor(
+              labeltext: "Department", initialValue: supervisor['department']),
+
+          CustomTextFormFieldSupervisor(
+              labeltext: "Address-City/Village",
+              initialValue: supervisor['address']),
+
+          CustomTextFormFieldSupervisor(
+              labeltext: "Mobile Number",
+              initialValue: supervisor['mobileNumber'].toString()),
         ],
       ),
     );
