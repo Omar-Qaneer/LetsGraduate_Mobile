@@ -27,7 +27,10 @@ class SupervisorHomeScreen extends StatelessWidget {
                       label: "Home",
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.group),
+                      icon: Icon(
+                        Icons.groups,
+                        size: 30,
+                      ),
                       label: "MyGroups",
                     ),
                     BottomNavigationBarItem(
@@ -49,9 +52,16 @@ class SupervisorHomeScreen extends StatelessWidget {
                       icon: const Icon(
                         Icons.notifications,
                         color: Colors.white,
+                        size: 30,
                       )),
                   IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.account_circle)),
+                      onPressed: () {
+                        controller.changePage(6);
+                      },
+                      icon: const Icon(
+                        Icons.account_circle,
+                        size: 40,
+                      )),
                 ],
               ),
               body: controller.listPage.elementAt(controller.currentPage),
