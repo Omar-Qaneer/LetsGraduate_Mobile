@@ -6,6 +6,68 @@ class Notifications extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List newComments = [
+      {
+        "notificationSender": "Group 1 ",
+        "notificationSenderType": "group",
+        "notificationContent": "is requesting you to supervise \nthier group",
+        "notificationDuration": "Mon at 7:03 AM",
+        "notificationType": "request"
+      },
+      {
+        "notificationSender": "Dr.Manar Qamhiee ",
+        "notificationSenderType": "doctor",
+        "notificationContent":
+            "accepted to supervise \nyour group this semester",
+        "notificationDuration": "1 hours ago",
+        "notificationType": "response"
+      },
+      {
+        "notificationSender": "Jamal SaadEldeen ",
+        "notificationSenderType": "student",
+        "notificationContent": "is requesting to join \nyour group",
+        "notificationDuration": "2 hours ago",
+        "notificationType": "request"
+      },
+      {
+        "notificationSender": "Projects Committe ",
+        "notificationSenderType": "doctor",
+        "notificationContent": "commented on\n your abstract",
+        "notificationDuration": "Mon at 7:03 AM",
+        "notificationType": "comment"
+      }
+    ];
+    List beforeThatComments = [
+      {
+        "notificationSender": "Group 1 ",
+        "notificationSenderType": "group",
+        "notificationContent": "is requesting you to supervise \nthier group",
+        "notificationDuration": "Mon at 7:03 AM",
+        "notificationType": "request"
+      },
+      {
+        "notificationSender": "Dr.Manar Qamhiee ",
+        "notificationSenderType": "doctor",
+        "notificationContent":
+            "accepted to supervise \nyour group this semester",
+        "notificationDuration": "1 hours ago",
+        "notificationType": "response"
+      },
+      {
+        "notificationSender": "Jamal SaadEldeen ",
+        "notificationSenderType": "student",
+        "notificationContent": "is requesting to join \nyour group",
+        "notificationDuration": "2 hours ago",
+        "notificationType": "request"
+      },
+      {
+        "notificationSender": "Projects Committe ",
+        "notificationSenderType": "doctor",
+        "notificationContent": "commented on\n your abstract",
+        "notificationDuration": "Mon at 7:03 AM",
+        "notificationType": "comment"
+      }
+    ];
     return Container(
       color: Colors.white,
       child: SingleChildScrollView(
@@ -22,26 +84,26 @@ class Notifications extends StatelessWidget {
                 height: 30,
               ),
               const Text(
-                "Today",
+                "New",
                 style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(
                 height: 10,
               ),
-              const CustomJoinRequest(
-                notificationSender: 'Dr.Manar Qamhiee ',
-                notificationContent:
-                    'accepted to supervise \nyour group this semester',
-                notificationDuration: '1 hours ago',
-                notificationType: 'response',
-                notificationSenderType: 'supervisor',
-              ),
-              const CustomJoinRequest(
-                notificationSender: 'Jamal SaadEldeen ',
-                notificationContent: 'is requesting to join \nyour group',
-                notificationDuration: '2 hours ago',
-                notificationType: 'request',
-                notificationSenderType: 'student',
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: beforeThatComments.length,
+                itemBuilder: (context, index) {
+                  final comment = beforeThatComments[index];
+                  return CustomJoinRequest(
+                    notificationSender: comment['notificationSender'],
+                    notificationContent: comment['notificationContent'],
+                    notificationDuration: comment['notificationDuration'],
+                    notificationType: comment['notificationType'],
+                    notificationSenderType: comment['notificationSenderType'],
+                  );
+                },
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
@@ -50,28 +112,20 @@ class Notifications extends StatelessWidget {
                   style: TextStyle(color: Colors.grey),
                 ),
               ),
-              const CustomJoinRequest(
-                notificationSender: 'Group 1 ',
-                notificationContent:
-                    'is requesting you to supervise \nthier group',
-                notificationDuration: 'Mon at 7:03 AM',
-                notificationType: 'request',
-                notificationSenderType: 'group',
-              ),
-              const CustomJoinRequest(
-                notificationSender: 'Dr.Manar Qamhiee ',
-                notificationContent:
-                    'is requesting you to \nsupervise thier group',
-                notificationDuration: 'Mon at 7:03 AM',
-                notificationType: 'info',
-                notificationSenderType: 'group',
-              ),
-              const CustomJoinRequest(
-                notificationSender: 'Projects Committe ',
-                notificationContent: 'commented on\n your abstract',
-                notificationDuration: 'Mon at 7:03 AM',
-                notificationType: 'comment',
-                notificationSenderType: 'group',
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: newComments.length,
+                itemBuilder: (context, index) {
+                  final comment = newComments[index];
+                  return CustomJoinRequest(
+                    notificationSender: comment['notificationSender'],
+                    notificationContent: comment['notificationContent'],
+                    notificationDuration: comment['notificationDuration'],
+                    notificationType: comment['notificationType'],
+                    notificationSenderType: comment['notificationSenderType'],
+                  );
+                },
               ),
             ],
           ),
