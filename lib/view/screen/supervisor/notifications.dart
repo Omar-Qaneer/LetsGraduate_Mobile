@@ -29,10 +29,19 @@ class Notifications extends StatelessWidget {
                 height: 10,
               ),
               const CustomJoinRequest(
+                notificationSender: 'Dr.Manar Qamhiee ',
+                notificationContent:
+                    'accepted to supervise \nyour group this semester',
+                notificationDuration: '1 hours ago',
+                notificationType: 'response',
+                notificationSenderType: 'supervisor',
+              ),
+              const CustomJoinRequest(
                 notificationSender: 'Jamal SaadEldeen ',
                 notificationContent: 'is requesting to join \nyour group',
                 notificationDuration: '2 hours ago',
-                notificationType: 'group',
+                notificationType: 'request',
+                notificationSenderType: 'student',
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
@@ -46,14 +55,23 @@ class Notifications extends StatelessWidget {
                 notificationContent:
                     'is requesting you to supervise \nthier group',
                 notificationDuration: 'Mon at 7:03 AM',
-                notificationType: 'supevisor',
+                notificationType: 'request',
+                notificationSenderType: 'group',
               ),
               const CustomJoinRequest(
-                notificationSender: 'Group 1 ',
+                notificationSender: 'Dr.Manar Qamhiee ',
                 notificationContent:
-                    'is requesting you to supervise \nthier group',
+                    'is requesting you to \nsupervise thier group',
                 notificationDuration: 'Mon at 7:03 AM',
-                notificationType: 'supevisor',
+                notificationType: 'info',
+                notificationSenderType: 'group',
+              ),
+              const CustomJoinRequest(
+                notificationSender: 'Projects Committe ',
+                notificationContent: 'commented on\n your abstract',
+                notificationDuration: 'Mon at 7:03 AM',
+                notificationType: 'comment',
+                notificationSenderType: 'group',
               ),
             ],
           ),
