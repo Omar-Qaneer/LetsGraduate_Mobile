@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluate_my_groups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluategroups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/mygroups/mygroups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/notifications.dart';
@@ -33,7 +34,8 @@ class SupervisorHomeScreenControllerImp extends SupervisorHomeScreenController {
     const EvaluateGroups(),
     const Submissions(),
     const Notifications(),
-    const ProfileSupervisor()
+    const ProfileSupervisor(),
+    const EvaluateMyGroups()
   ];
   @override
   changePage(int index) {

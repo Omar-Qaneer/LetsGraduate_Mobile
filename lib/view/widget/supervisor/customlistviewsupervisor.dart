@@ -23,7 +23,9 @@ class CustomListViewSupervisor extends StatelessWidget {
         final group = groups[index];
         final supervisorObject = group.elementAt(0);
         final supervisorName = supervisorObject['supervisorName'].toString();
-        final projectObject = group.elementAt(1);
+        final projectObject = pageName == "EvaluateGroups"
+            ? group.elementAt(1)
+            : group.elementAt(0);
         final projectName = projectObject['projectName'].toString();
         final student = group.elementAt(3);
         final submissionStatus = group.elementAt(2);
@@ -55,9 +57,9 @@ class CustomListViewSupervisor extends StatelessWidget {
                           style:
                               const TextStyle(color: Colors.grey, fontSize: 12),
                         ),
-                        Text((pageName == "Submissions"
-                            ? projectName
-                            : supervisorName))
+                        Text((pageName == "EvaluateGroups"
+                            ? supervisorName
+                            : projectName))
                       ],
                     ),
                   ),

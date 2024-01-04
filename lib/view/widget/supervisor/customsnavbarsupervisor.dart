@@ -61,9 +61,17 @@ class CustomNavBarSupervisor extends StatelessWidget {
                   ),
                   ListTile(
                     leading: const Icon(Icons.grading_sharp),
-                    title: const Text("Evaluate MyGroups"),
+                    title: const Text("Evaluate Groups"),
                     onTap: () {
                       controller.changePage(3);
+                      controller.listPage.elementAt(controller.currentPage);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.grading_sharp),
+                    title: const Text("Evaluate MyGroups"),
+                    onTap: () {
+                      controller.changePage(7);
                       controller.listPage.elementAt(controller.currentPage);
                     },
                   ),

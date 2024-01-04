@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/view/widget/supervisor/custommaterialbutton.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customtextformfieldsupervisor.dart';
-import 'package:get/get.dart';
 
 class ProfileSupervisor extends StatelessWidget {
   const ProfileSupervisor({super.key});
