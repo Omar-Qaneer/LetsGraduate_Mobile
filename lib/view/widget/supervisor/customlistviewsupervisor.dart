@@ -23,9 +23,9 @@ class CustomListViewSupervisor extends StatelessWidget {
         final group = groups[index];
         final supervisorObject = group.elementAt(0);
         final supervisorName = supervisorObject['supervisorName'].toString();
-        final projectObject = pageName == "EvaluateGroups"
-            ? group.elementAt(1)
-            : group.elementAt(0);
+        final projectObject = pageName == "EvaluateMyGroups"
+            ? group.elementAt(0)
+            : group.elementAt(1);
         final projectName = projectObject['projectName'].toString();
         final student = group.elementAt(3);
         final submissionStatus = group.elementAt(2);

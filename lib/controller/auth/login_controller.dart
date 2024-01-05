@@ -6,6 +6,7 @@ abstract class LoginController extends GetxController {
   login();
   goToSignUp();
   goToSupervisorHomeScreen();
+  goToStudentHomeScreen();
   goToForgetPassword();
 }
 
@@ -43,5 +44,10 @@ class LoginControllerImp extends LoginController {
   @override
   goToSupervisorHomeScreen() {
     Get.offAllNamed(AppRoute.supervisorHomeScreen);
+  }
+
+  @override
+  goToStudentHomeScreen() {
+    Get.offAllNamed(AppRoute.studentHomeScreen);
   }
 }
