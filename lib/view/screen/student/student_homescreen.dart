@@ -18,11 +18,9 @@ class StudentHomeScreen extends StatelessWidget {
                     selectedIndex = value;
                     controller.changePage(value);
                   },
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.green,
                   selectedItemColor: Colors.black,
                   unselectedItemColor: Colors.grey[400],
-                  selectedFontSize: 20,
-                  unselectedFontSize: 15,
                   items: const [
                     BottomNavigationBarItem(
                       icon: Icon(Icons.home),

@@ -37,6 +37,11 @@ class CustomNavBarStudent extends StatelessWidget {
                     onTap: () {},
                   ),
                   ListTile(
+                    leading: const Icon(Icons.connect_without_contact),
+                    title: const Text("Find partners"),
+                    onTap: () {},
+                  ),
+                  ListTile(
                     leading: const Icon(Icons.supervised_user_circle_sharp),
                     title: const Text("Register to a Supervisor"),
                     onTap: () {},
