@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customsearchbar.dart';
 
 class FindPartners extends StatelessWidget {
   const FindPartners({super.key});
@@ -32,6 +33,10 @@ class FindPartners extends StatelessWidget {
               ),
             );
           }),
+          const CustomSearchBar(hintText: "Search by first or last name"),
+          const SizedBox(
+            height: 40,
+          ),
         ]));
   }
 }
