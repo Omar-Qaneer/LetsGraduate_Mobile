@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/constant/routes.dart';
 import 'package:get/get.dart';
 
 abstract class FindPartnerController extends GetxController
     with GetSingleTickerProviderStateMixin {
   void findPartners();
+  void goToStudentDetailsPage(var student);
   void setPageIndex(int newIndex);
 }
 
@@ -45,5 +47,10 @@ class FindPartnerControllerImp extends FindPartnerController {
   void setPageIndex(int newIndex) {
     currentPageIndex = newIndex;
     update();
+  }
+
+  @override
+  void goToStudentDetailsPage(student) {
+    Get.toNamed(AppRoute.studentDetails, arguments: student);
   }
 }

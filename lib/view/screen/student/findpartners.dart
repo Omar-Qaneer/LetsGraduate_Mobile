@@ -105,8 +105,7 @@ class FindPartners extends StatelessWidget {
 
             Expanded(
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: TabBarView(
                   controller: controller.findPartnerTabController,
                   children: [
