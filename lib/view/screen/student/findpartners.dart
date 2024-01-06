@@ -8,29 +8,26 @@ class FindPartners extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.symmetric(vertical: 30),
-        child: ListView(children: const [
+        child: ListView(children: [
           // titles
-          CustomTextStudent(
-            text: "Find Your Partners",
-            fontSize: 30,
-            horizontalPadding: 15,
-            verticalPadding: 5,
-          ),
 
-          CustomTextStudent(
-            text:
-                "Here You can send request to create partnerships with other students",
-            fontSize: 16,
-            horizontalPadding: 20,
-            verticalPadding: 20,
-          ),
+          ...List.generate(3, (index) {
+            final texts = [
+              "Find Your Partners",
+              "Here You can send request to create partnerships with other students",
+              "Available Groups"
+            ];
+            List<double> fontSizes = [30, 16, 25];
+            List<double> horizontalPaddings = [15, 20, 15];
+            List<double> verticalPaddings = [5, 20, 15];
 
-          CustomTextStudent(
-            text: "Available Groups",
-            fontSize: 25,
-            horizontalPadding: 15,
-            verticalPadding: 15,
-          ),
+            return CustomTextStudent(
+              text: texts[index],
+              fontSize: fontSizes[index],
+              horizontalPadding: horizontalPaddings[index],
+              verticalPadding: verticalPaddings[index],
+            );
+          })
         ]));
   }
 }
