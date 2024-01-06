@@ -89,6 +89,7 @@ class MyPartners extends StatelessWidget {
                         Icons.account_circle,
                         size: 45,
                       ),
+                      pageName: 'MyPartners',
                     ),
                   );
                 },

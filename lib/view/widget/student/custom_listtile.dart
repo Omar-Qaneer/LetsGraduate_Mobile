@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 class CustomListTileStudent extends StatelessWidget {
   final String name;
   final String email;
+  final String pageName;
   final Widget widget;
   const CustomListTileStudent({
     super.key,
     required this.name,
     required this.email,
     required this.widget,
+    required this.pageName,
   });
 
   @override
