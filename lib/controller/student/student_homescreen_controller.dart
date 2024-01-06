@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/screen/student/mypartners.dart';
 import 'package:flutter_application_1/view/screen/student/profile_student.dart';
 import 'package:get/get.dart';
 
@@ -17,14 +18,7 @@ class StudentHomeScreenControllerImp extends StudentHomeScreenController {
         ),
       ],
     ),
-    const Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Center(
-          child: Text("My partners"),
-        ),
-      ],
-    ),
+    const MyPartners(),
     const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
