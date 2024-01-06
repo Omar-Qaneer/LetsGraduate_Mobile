@@ -54,7 +54,9 @@ class CustomNavBarStudent extends StatelessWidget {
                     leading: const Icon(Icons.lightbulb_circle),
                     title: const Text("My Project"),
                     subtitle: const Text("Information & Details"),
-                    onTap: () {},
+                    onTap: () {
+                      controller.changePage(5);
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.picture_as_pdf),

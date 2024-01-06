@@ -59,11 +59,11 @@ class MyProject extends StatelessWidget {
     MyProjectControllerImp controller = Get.put(MyProjectControllerImp());
 
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 60,
+            height: 20,
           ),
           // titles
           ...List.generate(3, (index) {
@@ -153,21 +153,37 @@ class MyProject extends StatelessWidget {
                   TableRow(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('DR.Manar Qamhiee'),
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'DR.Manar Qamhiee',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.bold),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Computer Engineering'),
+                        child: Text(
+                          'Computer Engineering',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.bold),
+                        ),
                       ),
                       Padding(
                         padding:
-                            EdgeInsets.symmetric(vertical: 8, horizontal: 0),
-                        child: Text('manarqamhiee@gmail.com'),
+                            EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                        child: Text(
+                          'manarqamhiee@gmail.com',
+                          style: TextStyle(
+                              fontSize: 10, fontWeight: FontWeight.bold),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('0594251789'),
+                        child: Text(
+                          '0594251789',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   ),
