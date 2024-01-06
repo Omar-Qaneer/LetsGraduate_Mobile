@@ -7,14 +7,53 @@ class MyPartners extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Map student = {
-      "name": "Omar Qaneer",
-      "email": "omarqaneer@gmail.com",
-      "academicNumber": "11925044",
-      "department": "Computer Engineering",
-      "address": "Nablus",
-      "mobileNumber": "0594656980",
-    };
+    final students = [
+      {
+        "name": 'Omar Qaneer',
+        "number": 11925044,
+        "department": 'Computer Engineering',
+        "email": 'omarqaner@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Nablus',
+        "isPressed": false,
+      },
+      {
+        "name": 'Jamal SaadEddin',
+        "number": 12345678,
+        "department": 'Computer Engineering',
+        "email": 'jamal@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Nablus',
+        "isPressed": false,
+      },
+      {
+        "name": 'Obaida Aws',
+        "number": 98765432,
+        "department": 'Computer Engineering',
+        "email": 'obaidaaws@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Aqraba',
+        "isPressed": false,
+      },
+      {
+        "name": 'Abdallah Ads',
+        "number": 98765432,
+        "department": 'Computer Engineering',
+        "email": 'abdallahads@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Tulkarem',
+        "isPressed": false,
+      },
+      {
+        "name": 'Omar Quzmar',
+        "number": 98765432,
+        "department": 'Computer Engineering',
+        "email": 'omarquzmar@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Jenin',
+        "isPressed": false,
+      },
+    ];
     return Scaffold(
         appBar: AppBar(
           title: const Text("My Partners"),
@@ -29,13 +68,28 @@ class MyPartners extends StatelessWidget {
                 horizontalPadding: 15,
                 verticalPadding: 5,
               ),
-              CustomListTileStudent(
-                name: student['name'],
-                email: student['email'],
-                widget: const Icon(
-                  Icons.account_circle,
-                  size: 45,
-                ),
+
+              ListView.separated(
+                physics: const ScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: students.length,
+                itemBuilder: (context, index) {
+                  final student = students[index];
+                  return InkWell(
+                    onTap: () {},
+                    child: CustomListTileStudent(
+                      name: student['name'].toString(),
+                      email: student['email'].toString(),
+                      widget: const Icon(
+                        Icons.account_circle,
+                        size: 45,
+                      ),
+                    ),
+                  );
+                },
+                separatorBuilder: (BuildContext context, int index) {
+                  return const Divider();
+                },
               )
             ])));
   }

@@ -24,7 +24,10 @@ class CustomListTileStudent extends StatelessWidget {
       ),
       subtitle: Row(
         children: [
-          const Icon(Icons.email),
+          const Icon(
+            Icons.email,
+            size: 20,
+          ),
           const SizedBox(
             width: 5,
           ),
