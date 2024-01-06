@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/student/mypartners_controller.dart';
 import 'package:flutter_application_1/view/widget/student/custom_listtile.dart';
-import 'package:flutter_application_1/view/widget/student/custom_text_student.dart';
 import 'package:get/get.dart';
 
 class MyPartners extends StatelessWidget {
@@ -65,11 +64,12 @@ class MyPartners extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: ListView(children: [
               // titles
-              const CustomTextStudent(
-                text: "Click to see member details",
-                fontSize: 25,
-                horizontalPadding: 15,
-                verticalPadding: 5,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                child: Text(
+                  "Click to see member details",
+                  style: TextStyle(fontSize: 25, color: Colors.blue),
+                ),
               ),
 
               ListView.separated(

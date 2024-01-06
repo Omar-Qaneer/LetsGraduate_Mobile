@@ -41,7 +41,9 @@ class CustomNavBarStudent extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.connect_without_contact),
                     title: const Text("Find partners"),
-                    onTap: () {},
+                    onTap: () {
+                      controller.changePage(4);
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.supervised_user_circle_sharp),
