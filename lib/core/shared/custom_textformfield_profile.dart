@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CustomTextFormFieldSupervisor extends StatelessWidget {
+class CustomTextFormFieldProfile extends StatelessWidget {
   final String labeltext;
   final String initialValue;
-  const CustomTextFormFieldSupervisor({
+  const CustomTextFormFieldProfile({
     super.key,
     required this.labeltext,
     required this.initialValue,

@@ -29,21 +29,21 @@ class ProfileSupervisor extends StatelessWidget {
                 name: supervisor['name']),
           ),
 
-          CustomTextFormFieldSupervisor(
+          CustomTextFormFieldProfile(
               labeltext: "Email Address", initialValue: supervisor['email']),
 
-          CustomTextFormFieldSupervisor(
+          CustomTextFormFieldProfile(
               labeltext: "Academic Number",
               initialValue: supervisor['academicNumber'].toString()),
 
-          CustomTextFormFieldSupervisor(
+          CustomTextFormFieldProfile(
               labeltext: "Department", initialValue: supervisor['department']),
 
-          CustomTextFormFieldSupervisor(
+          CustomTextFormFieldProfile(
               labeltext: "Address-City/Village",
               initialValue: supervisor['address']),
 
-          CustomTextFormFieldSupervisor(
+          CustomTextFormFieldProfile(
               labeltext: "Mobile Number",
               initialValue: supervisor['mobileNumber'].toString()),
         ],
