@@ -83,8 +83,8 @@ class MyPartners extends StatelessWidget {
                       controller.goToStudentDetailsPage(student);
                     },
                     child: CustomListTileStudent(
-                      name: student['name'].toString(),
-                      email: student['email'].toString(),
+                      title: student['name'].toString(),
+                      subtitle: student['email'].toString(),
                       widget: const Icon(
                         Icons.account_circle,
                         size: 45,

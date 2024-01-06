@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/student/findpartners_controller.dart';
+import 'package:flutter_application_1/view/widget/student/findpartners/custom_groupsview.dart';
 import 'package:flutter_application_1/view/widget/student/findpartners/custom_studentsview.dart';
 import 'package:flutter_application_1/view/widget/student/findpartners/custom_tabbar_student.dart';
 import 'package:flutter_application_1/view/widget/supervisor/customsearchbar.dart';
@@ -110,7 +111,7 @@ class FindPartners extends StatelessWidget {
                   controller: controller.findPartnerTabController,
                   children: [
                     CustomStudentsView(students: students),
-                    const Text("Groups"),
+                    const CustomGroupsView()
                   ],
                 ),
               ),

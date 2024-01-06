@@ -6,6 +6,7 @@ abstract class FindPartnerController extends GetxController
     with GetSingleTickerProviderStateMixin {
   void findPartners();
   void goToStudentDetailsPage(var student);
+  void goToGrouptDetailsPage(var group);
   void setPageIndex(int newIndex);
 }
 
@@ -52,5 +53,10 @@ class FindPartnerControllerImp extends FindPartnerController {
   @override
   void goToStudentDetailsPage(student) {
     Get.toNamed(AppRoute.studentDetails, arguments: student);
+  }
+
+  @override
+  void goToGrouptDetailsPage(group) {
+    Get.toNamed(AppRoute.groupDetails, arguments: group);
   }
 }

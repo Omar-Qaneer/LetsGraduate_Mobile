@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/view/widget/student/findpartners/custom_trailing.dart';
 
 class CustomListTileStudent extends StatelessWidget {
-  final String name;
-  final String email;
+  final String title;
+  final String subtitle;
   final String pageName;
   final Widget widget;
   final void Function()? onPressed1;
   final void Function()? onPressed2;
   const CustomListTileStudent({
     super.key,
-    required this.name,
-    required this.email,
+    required this.title,
+    required this.subtitle,
     required this.widget,
     required this.pageName,
     this.onPressed1,
@@ -26,13 +26,13 @@ class CustomListTileStudent extends StatelessWidget {
         child: widget,
       ),
       title: Text(
-        name,
+        title,
         style: TextStyle(
-            fontSize: pageName == "MyPartners" ? 16 : 12,
+            fontSize: pageName == "StudentsView" ? 12 : 16,
             fontWeight: FontWeight.bold),
       ),
       subtitle: Text(
-        email,
+        subtitle,
         style: const TextStyle(fontSize: 10),
       ),
       trailing: pageName == "MyPartners"

@@ -9,7 +9,7 @@ class GroupDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MyGroupsControllerImp controller = Get.find();
+    MyGroupsControllerImp controller = Get.put(MyGroupsControllerImp());
     final group = Get.arguments;
     return Scaffold(
         appBar: AppBar(

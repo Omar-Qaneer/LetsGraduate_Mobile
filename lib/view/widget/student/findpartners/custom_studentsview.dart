@@ -17,9 +17,9 @@ class CustomStudentsView extends StatelessWidget {
       itemBuilder: (context, index) {
         final student = students[index];
         return CustomListTileStudent(
-          name: student['name'].toString(),
-          email: student['email'].toString(),
-          pageName: 'FindPartners',
+          title: student['name'].toString(),
+          subtitle: student['email'].toString(),
+          pageName: 'StudentsView',
           widget: const Icon(
             Icons.account_circle,
             size: 45,
