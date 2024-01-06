@@ -11,7 +11,7 @@ import 'package:flutter_application_1/view/screen/auth/verifyemailsignup.dart';
 import 'package:flutter_application_1/view/screen/student/student_homescreen.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluategroups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/mygroups/groupdetails.dart';
-import 'package:flutter_application_1/view/screen/supervisor/mygroups/studentdetails.dart';
+import 'package:flutter_application_1/core/shared/custom_studentdetails.dart';
 import 'package:flutter_application_1/view/screen/supervisor/supervisorhomescreen.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
