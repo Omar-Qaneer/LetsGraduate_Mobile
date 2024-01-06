@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controller/student/mypartners_controller.dart';
+import 'package:flutter_application_1/controller/student/myproject_controller.dart';
 import 'package:flutter_application_1/view/widget/student/custom_listtile.dart';
 import 'package:get/get.dart';
 
@@ -55,7 +55,7 @@ class MyPartners extends StatelessWidget {
         "isPressed": false,
       },
     ];
-    MyPartnersControllerImp controller = Get.put(MyPartnersControllerImp());
+    MyProjectControllerImp controller = Get.put(MyProjectControllerImp());
     return Scaffold(
         appBar: AppBar(
           title: const Text("My Partners"),
