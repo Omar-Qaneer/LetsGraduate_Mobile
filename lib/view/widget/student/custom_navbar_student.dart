@@ -29,7 +29,9 @@ class CustomNavBarStudent extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.account_circle),
                     title: const Text("Profile"),
-                    onTap: () {},
+                    onTap: () {
+                      controller.changePage(3);
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.notifications),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/screen/student/profile_student.dart';
 import 'package:get/get.dart';
 
 abstract class StudentHomeScreenController extends GetxController {
@@ -32,6 +33,7 @@ class StudentHomeScreenControllerImp extends StudentHomeScreenController {
         ),
       ],
     ),
+    const ProfileStudent()
   ];
   @override
   changePage(int index) {

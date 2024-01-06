@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/view/widget/supervisor/custommaterialbutton.dart';
-import 'package:flutter_application_1/view/widget/supervisor/customtextformfieldsupervisor.dart';
+import 'package:flutter_application_1/core/shared/custom_textformfield_profile.dart';
 import 'package:get/get.dart';
 
 class StudentDetails extends StatelessWidget {

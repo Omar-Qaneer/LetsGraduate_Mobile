@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/shared/custom_textformfield_profile.dart';
+import 'package:flutter_application_1/view/widget/supervisor/customtextformfieldsupervisor.dart';
 
-class ProfileSupervisor extends StatelessWidget {
-  const ProfileSupervisor({super.key});
+class ProfileStudent extends StatelessWidget {
+  const ProfileStudent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Map supervisor = {
-      "name": "DR.Manar Qamhiee",
-      "email": "manarqamhiee@gmail.com",
-      "academicNumber": "1394",
+    Map student = {
+      "name": "Omar Qaneer",
+      "email": "omarqaneer@gmail.com",
+      "registrationNumber": "11925044",
       "department": "Computer Engineering",
       "address": "Nablus",
-      "mobileNumber": "0594251789",
+      "mobileNumber": "0594656980",
     };
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -33,7 +33,7 @@ class ProfileSupervisor extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  supervisor['name'],
+                  student['name'],
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),
                 )
@@ -45,22 +45,22 @@ class ProfileSupervisor extends StatelessWidget {
           ),
 
           CustomTextFormFieldSupervisor(
-              labeltext: "Email Address", initialValue: supervisor['email']),
+              labeltext: "Email Address", initialValue: student['email']),
 
           CustomTextFormFieldSupervisor(
-              labeltext: "Academic Number",
-              initialValue: supervisor['academicNumber'].toString()),
+              labeltext: "Registration Number",
+              initialValue: student['registrationNumber'].toString()),
 
           CustomTextFormFieldSupervisor(
-              labeltext: "Department", initialValue: supervisor['department']),
+              labeltext: "Department", initialValue: student['department']),
 
           CustomTextFormFieldSupervisor(
               labeltext: "Address-City/Village",
-              initialValue: supervisor['address']),
+              initialValue: student['address']),
 
           CustomTextFormFieldSupervisor(
               labeltext: "Mobile Number",
-              initialValue: supervisor['mobileNumber'].toString()),
+              initialValue: student['mobileNumber'].toString()),
         ],
       ),
     );

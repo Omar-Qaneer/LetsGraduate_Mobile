@@ -53,7 +53,9 @@ class StudentHomeScreen extends StatelessWidget {
                         size: 30,
                       )),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.changePage(3);
+                      },
                       icon: const Icon(
                         Icons.account_circle,
                         size: 40,
