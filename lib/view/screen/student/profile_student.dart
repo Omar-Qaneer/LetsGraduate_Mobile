@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/view/widget/supervisor/customtextformfieldsupervisor.dart';
+import 'package:flutter_application_1/core/shared/custom_textformfield_profile.dart';
 
 class ProfileStudent extends StatelessWidget {
   const ProfileStudent({super.key});
@@ -9,7 +9,7 @@ class ProfileStudent extends StatelessWidget {
     Map student = {
       "name": "Omar Qaneer",
       "email": "omarqaneer@gmail.com",
-      "registrationNumber": "11925044",
+      "academicNumber": "11925044",
       "department": "Computer Engineering",
       "address": "Nablus",
       "mobileNumber": "0594656980",
