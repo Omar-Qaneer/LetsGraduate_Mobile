@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/shared/custom_profile_head.dart';
 import 'package:flutter_application_1/core/shared/custom_textformfield_profile.dart';
 
 class ProfileStudent extends StatelessWidget {
@@ -20,29 +21,12 @@ class ProfileStudent extends StatelessWidget {
         children: [
           //profile picture
           Center(
-            child: Column(
-              children: [
-                Container(
-                  margin: const EdgeInsets.symmetric(vertical: 24),
-                  child: const CircleAvatar(
-                    radius: 50,
-                    child: Icon(
-                      Icons.account_circle,
-                      size: 100,
-                    ),
+              child: CustomProfileHead(
+                  widget: const Icon(
+                    Icons.account_circle,
+                    size: 100,
                   ),
-                ),
-                Text(
-                  student['name'],
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 40,
-          ),
+                  name: student['name'])),
 
           CustomTextFormFieldSupervisor(
               labeltext: "Email Address", initialValue: student['email']),
