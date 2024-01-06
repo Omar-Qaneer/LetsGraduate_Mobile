@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/shared/custom_profile_head.dart';
 import 'package:flutter_application_1/view/widget/supervisor/custommaterialbutton.dart';
 import 'package:flutter_application_1/core/shared/custom_textformfield_profile.dart';
 import 'package:get/get.dart';
@@ -20,42 +21,25 @@ class StudentDetails extends StatelessWidget {
           children: [
             //profile picture
             Center(
-              child: Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 24),
-                    child: const CircleAvatar(
-                      backgroundImage: AssetImage("assets/images/profile.jpg"),
-                      radius: 50,
-                    ),
-                  ),
-                  Text(
-                    student['name'],
-                    style: const TextStyle(
-                        fontSize: 25, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
+                child: CustomProfileHead(
+                    widget: Image.asset("assets/images/profile.jpg"),
+                    name: student['name'])),
 
-            CustomTextFormFieldSupervisor(
+            CustomTextFormFieldProfile(
                 labeltext: "Email Address", initialValue: student['email']),
 
-            CustomTextFormFieldSupervisor(
+            CustomTextFormFieldProfile(
                 labeltext: "Registression Number",
                 initialValue: student['number'].toString()),
 
-            CustomTextFormFieldSupervisor(
+            CustomTextFormFieldProfile(
                 labeltext: "Department", initialValue: student['department']),
 
-            CustomTextFormFieldSupervisor(
+            CustomTextFormFieldProfile(
                 labeltext: "Address-City/Village",
                 initialValue: student['address']),
 
-            CustomTextFormFieldSupervisor(
+            CustomTextFormFieldProfile(
                 labeltext: "Mobile Number",
                 initialValue: student['mobileNumber'].toString()),
 
