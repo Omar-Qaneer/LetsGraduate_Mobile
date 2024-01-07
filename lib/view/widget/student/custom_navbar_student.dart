@@ -48,7 +48,9 @@ class CustomNavBarStudent extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.supervised_user_circle_sharp),
                     title: const Text("Register to a Supervisor"),
-                    onTap: () {},
+                    onTap: () {
+                      controller.changePage(6);
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.lightbulb_circle),

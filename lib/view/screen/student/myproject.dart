@@ -4,58 +4,57 @@ import 'package:flutter_application_1/view/widget/student/custom_listtile.dart';
 import 'package:get/get.dart';
 
 class MyProject extends StatelessWidget {
-  MyProject({super.key});
-
-  final students = [
-    {
-      "name": 'Omar Qaneer',
-      "number": 11925044,
-      "department": 'Computer Engineering',
-      "email": 'omarqaner@gmail.co',
-      "mobileNumber": 05954698745,
-      "address": 'Nablus',
-      "isPressed": false,
-    },
-    {
-      "name": 'Jamal SaadEddin',
-      "number": 12345678,
-      "department": 'Computer Engineering',
-      "email": 'jamal@gmail.co',
-      "mobileNumber": 05954698745,
-      "address": 'Nablus',
-      "isPressed": false,
-    },
-    {
-      "name": 'Obaida Aws',
-      "number": 98765432,
-      "department": 'Computer Engineering',
-      "email": 'obaidaaws@gmail.co',
-      "mobileNumber": 05954698745,
-      "address": 'Aqraba',
-      "isPressed": false,
-    },
-    {
-      "name": 'Abdallah Ads',
-      "number": 98765432,
-      "department": 'Computer Engineering',
-      "email": 'abdallahads@gmail.co',
-      "mobileNumber": 05954698745,
-      "address": 'Tulkarem',
-      "isPressed": false,
-    },
-    {
-      "name": 'Omar Quzmar',
-      "number": 98765432,
-      "department": 'Computer Engineering',
-      "email": 'omarquzmar@gmail.co',
-      "mobileNumber": 05954698745,
-      "address": 'Jenin',
-      "isPressed": false,
-    },
-  ];
+  const MyProject({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final students = [
+      {
+        "name": 'Omar Qaneer',
+        "number": 11925044,
+        "department": 'Computer Engineering',
+        "email": 'omarqaner@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Nablus',
+        "isPressed": false,
+      },
+      {
+        "name": 'Jamal SaadEddin',
+        "number": 12345678,
+        "department": 'Computer Engineering',
+        "email": 'jamal@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Nablus',
+        "isPressed": false,
+      },
+      {
+        "name": 'Obaida Aws',
+        "number": 98765432,
+        "department": 'Computer Engineering',
+        "email": 'obaidaaws@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Aqraba',
+        "isPressed": false,
+      },
+      {
+        "name": 'Abdallah Ads',
+        "number": 98765432,
+        "department": 'Computer Engineering',
+        "email": 'abdallahads@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Tulkarem',
+        "isPressed": false,
+      },
+      {
+        "name": 'Omar Quzmar',
+        "number": 98765432,
+        "department": 'Computer Engineering',
+        "email": 'omarquzmar@gmail.co',
+        "mobileNumber": 05954698745,
+        "address": 'Jenin',
+        "isPressed": false,
+      },
+    ];
     MyProjectControllerImp controller = Get.put(MyProjectControllerImp());
 
     return Scaffold(
