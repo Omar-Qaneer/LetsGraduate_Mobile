@@ -4,12 +4,15 @@ import 'package:flutter_application_1/view/widget/supervisor/custommaterialbutto
 import 'package:flutter_application_1/core/shared/custom_textformfield_profile.dart';
 import 'package:get/get.dart';
 
-class StudentDetails extends StatelessWidget {
-  const StudentDetails({super.key});
+class UserDetails extends StatelessWidget {
+  const UserDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final student = Get.arguments;
+    final userType = Get.arguments['userType'];
+    Map<String, Object> data = Get.arguments['data'];
+    String labelText =
+        userType == "student" ? "Registression Number" : "Academic Number";
     return Scaffold(
       appBar: AppBar(
         title: const Text("Profile"),
@@ -23,25 +26,26 @@ class StudentDetails extends StatelessWidget {
             Center(
                 child: CustomProfileHead(
                     widget: Image.asset("assets/images/profile.jpg"),
-                    name: student['name'])),
+                    name: data['name'].toString())),
 
             CustomTextFormFieldProfile(
-                labeltext: "Email Address", initialValue: student['email']),
+                labeltext: "Email Address",
+                initialValue: data['email'].toString()),
 
             CustomTextFormFieldProfile(
-                labeltext: "Registression Number",
-                initialValue: student['number'].toString()),
+                labeltext: labelText, initialValue: data['number'].toString()),
 
             CustomTextFormFieldProfile(
-                labeltext: "Department", initialValue: student['department']),
+                labeltext: "Department",
+                initialValue: data['department'].toString()),
 
             CustomTextFormFieldProfile(
                 labeltext: "Address-City/Village",
-                initialValue: student['address']),
+                initialValue: data['address'].toString()),
 
             CustomTextFormFieldProfile(
                 labeltext: "Mobile Number",
-                initialValue: student['mobileNumber'].toString()),
+                initialValue: data['mobileNumber'].toString()),
 
             CustomMaterialButtonSupervisor(
               text: "Back",

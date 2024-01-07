@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 abstract class FindPartnerController extends GetxController
     with GetSingleTickerProviderStateMixin {
   void findPartners();
-  void goToStudentDetailsPage(var student);
+  void goToStudentDetailsPage(Map<String, Object> student);
   void goToGrouptDetailsPage(var group);
   void setPageIndex(int newIndex);
 }
@@ -51,8 +51,9 @@ class FindPartnerControllerImp extends FindPartnerController {
   }
 
   @override
-  void goToStudentDetailsPage(student) {
-    Get.toNamed(AppRoute.studentDetails, arguments: student);
+  void goToStudentDetailsPage(Map<String, Object> student) {
+    Get.toNamed(AppRoute.userDetails,
+        arguments: {'data': student, 'userType': "student"});
   }
 
   @override

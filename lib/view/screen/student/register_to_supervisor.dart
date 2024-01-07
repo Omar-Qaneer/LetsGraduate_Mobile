@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/student/register_to_supervisor_controller.dart';
 import 'package:flutter_application_1/view/widget/student/custom_listtile.dart';
 import 'package:flutter_application_1/view/widget/student/custom_trailing.dart';
+import 'package:get/get.dart';
 
 class RegisterToSupervisor extends StatelessWidget {
   const RegisterToSupervisor({super.key});
@@ -9,82 +11,29 @@ class RegisterToSupervisor extends StatelessWidget {
   Widget build(BuildContext context) {
     final supervisors = [
       {
-        'name': 'Dr. Abdalla Rashed',
-        'department': 'Computer Engineering',
-        'email': 'abdallah@gmail.com',
-        'expertise': 'Artificial Intelligence',
-        'researchAreas': ['Machine Learning', 'Natural Language Processing'],
+        "name": 'Dr. Abdalla Rashed',
+        "number": '1394',
+        "department": 'Computer Engineering',
+        "email": 'abdallah@gmail.com',
+        "address": 'Jenin',
+        "mobileNumber": '0564874125',
+        "expertise": 'Artificial Intelligence',
+        "researchAreas": ['Machine Learning', 'Natural Language Processing'],
       },
       {
-        'name': 'Dr. Aladdin Masri',
-        'department': 'Computer Engineering',
-        'email': 'aladdin@gmail.com',
-        'expertise': 'Software Engineering',
-        'researchAreas': ['Cloud Computing', 'Distributed Systems'],
+        "name": 'Dr. Aladdin Masri',
+        "number": '1355',
+        "department": 'Computer Engineering',
+        "email": 'aladdin@gmail.com',
+        "address": 'Nablus',
+        "mobileNumber": '0598745987',
+        "expertise": 'Software Engineering',
+        "researchAreas": ['Cloud Computing', 'Distributed Systems'],
       },
     ];
 
-    // final rows = [
-    //   const DataRow(cells: [
-    //     DataCell(Text('Dr. Abdalla Rashed')),
-    //   ]),
-    //   const DataRow(cells: [
-    //     DataCell(Text('Dr. Aladdin Masri')),
-    //   ]),
-    //   const DataRow(cells: [
-    //     DataCell(Text('Dr. Amjad Abu-Hassan')),
-    //   ]),
-    // ];
-
-    // final List<Map<String, dynamic>> supervisors = [
-    //   {
-    //     'name': 'Dr. Abdalla Rashed',
-    //     'requestSupervising': true,
-    //   },
-    //   {
-    //     'name': 'Dr. Aladdin Masri',
-    //     'requestSupervising': false,
-    //   },
-    //   {
-    //     'name': 'Dr. Amjad Abu-Hassan',
-    //     'requestSupervising': false,
-    //   },
-    // ];
-
-    // final rows = List.generate(
-    //   supervisors.length,
-    //   (index) => DataRow(
-    //     cells: [
-    //       DataCell(Text(supervisors[index]['name'])),
-    //       DataCell(MaterialButton(
-    //               shape: OutlineInputBorder(
-    //                   borderRadius: BorderRadius.circular(20)),
-    //               color: Colors.blue,
-    //               onPressed: () {},
-    //               child: const Row(
-    //                 children: [
-    //                   Text(
-    //                     "Send Registration",
-    //                     style: TextStyle(color: Colors.white),
-    //                   ),
-    //                   SizedBox(
-    //                     width: 10,
-    //                   ),
-    //                   Icon(Icons.send)
-    //                 ],
-    //               ))
-    //           //   IconButton(
-    //           //     onPressed: () {
-    //           //       // handle request supervising action
-    //           //     },
-    //           //     icon: Icon(supervisors[index]['requestSupervising']
-    //           //         ? Icons.check_box
-    //           //         : Icons.check_box_outline_blank),
-    //           //   ),
-    //           ),
-    //     ],
-    //   ),
-    // );
+    RegisterToSupervisorControllerImp controller =
+        Get.put(RegisterToSupervisorControllerImp());
 
     return Scaffold(
       body: Container(
@@ -129,7 +78,9 @@ class RegisterToSupervisor extends StatelessWidget {
                   pageName: 'RegisterToSupervisor',
                   trailing: CustomTrailing(
                     buttonTwoText: "Send Request",
-                    onPressed1: () {},
+                    onPressed1: () {
+                      controller.goToSupervisorDetailsPage(supervisor);
+                    },
                     onPressed2: () {},
                   ),
                 );

@@ -8,6 +8,6 @@ abstract class MyProjectController extends GetxController {
 class MyProjectControllerImp extends MyProjectController {
   @override
   goToStudentDetailsPage(Map<String, Object> student) {
-    Get.toNamed(AppRoute.studentDetails, arguments: student);
+    Get.toNamed(AppRoute.userDetails, arguments: student);
   }
 }

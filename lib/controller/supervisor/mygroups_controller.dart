@@ -14,6 +14,7 @@ class MyGroupsControllerImp extends MyGroupsController {
 
   @override
   goToStudentDetailsPage(Map<String, Object> student) {
-    Get.toNamed(AppRoute.studentDetails, arguments: student);
+    Get.toNamed(AppRoute.userDetails,
+        arguments: {'data': student, 'userType': "student"});
   }
 }
