@@ -17,16 +17,26 @@ class CustomListTileStudent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double fontSize;
+    if (pageName == "StudentsView") {
+      fontSize = 12;
+    } else if (pageName == "RegisterToSupervisor") {
+      fontSize = 12;
+    } else {
+      fontSize = 16;
+    }
     return ListTile(
         leading: CircleAvatar(
-          radius: 25,
+          radius: pageName == "RegisterToSupervisor" ? 20 : 25,
           child: widget,
         ),
         title: Text(
           title,
           style: TextStyle(
-              fontSize: pageName == "StudentsView" ? 12 : 16,
-              fontWeight: FontWeight.bold),
+              fontSize: fontSize,
+              fontWeight: pageName == "RegisterToSupervisor"
+                  ? FontWeight.w900
+                  : FontWeight.bold),
         ),
         subtitle: Text(
           subtitle,

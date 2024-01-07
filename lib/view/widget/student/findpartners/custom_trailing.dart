@@ -31,8 +31,8 @@ class CustomTrailing extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(
-          width: 10,
+        SizedBox(
+          width: buttonTwoText == "Send Request" ? 4 : 10,
         ),
         Container(
           height: 33,

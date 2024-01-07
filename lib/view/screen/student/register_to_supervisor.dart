@@ -124,7 +124,7 @@ class RegisterToSupervisor extends StatelessWidget {
                   subtitle: supervisor['email'].toString(),
                   widget: const Icon(
                     Icons.account_circle,
-                    size: 45,
+                    size: 40,
                   ),
                   pageName: 'RegisterToSupervisor',
                   trailing: CustomTrailing(
