@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/student/findpartners_controller.dart';
 import 'package:flutter_application_1/view/widget/student/custom_listtile.dart';
+import 'package:flutter_application_1/view/widget/student/findpartners/custom_trailing.dart';
 import 'package:get/get.dart';
 
 class CustomGroupsView extends StatelessWidget {
@@ -81,10 +82,12 @@ class CustomGroupsView extends StatelessWidget {
             Icons.group,
             size: 35,
           ),
-          onPressed1: () {
-            controller.goToGrouptDetailsPage(group);
-          },
-          onPressed2: () {},
+          trailing: CustomTrailing(
+            onPressed1: () {
+              controller.goToGrouptDetailsPage(group);
+            },
+            onPressed2: () {},
+          ),
         );
       },
       separatorBuilder: (BuildContext context, int index) {

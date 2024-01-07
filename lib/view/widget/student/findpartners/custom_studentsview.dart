@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/student/findpartners_controller.dart';
 import 'package:flutter_application_1/view/widget/student/custom_listtile.dart';
+import 'package:flutter_application_1/view/widget/student/findpartners/custom_trailing.dart';
 import 'package:get/get.dart';
 
 class CustomStudentsView extends StatelessWidget {
@@ -24,10 +25,12 @@ class CustomStudentsView extends StatelessWidget {
             Icons.account_circle,
             size: 45,
           ),
-          onPressed1: () {
-            controller.goToStudentDetailsPage(student);
-          },
-          onPressed2: () {},
+          trailing: CustomTrailing(
+            onPressed1: () {
+              controller.goToStudentDetailsPage(student);
+            },
+            onPressed2: () {},
+          ),
         );
       },
       separatorBuilder: (BuildContext context, int index) {
