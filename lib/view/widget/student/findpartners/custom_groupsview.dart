@@ -87,6 +87,7 @@ class CustomGroupsView extends StatelessWidget {
               controller.goToGrouptDetailsPage(group);
             },
             onPressed2: () {},
+            buttonTwoText: 'Join Group',
           ),
         );
       },

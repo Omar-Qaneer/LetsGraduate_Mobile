@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class CustomTrailing extends StatelessWidget {
   final void Function()? onPressed1;
   final void Function()? onPressed2;
+  final String buttonTwoText;
   const CustomTrailing({
     super.key,
     this.onPressed1,
     this.onPressed2,
+    required this.buttonTwoText,
   });
 
   @override
@@ -41,9 +43,12 @@ class CustomTrailing extends StatelessWidget {
           ),
           child: TextButton(
             onPressed: onPressed2,
-            child: const Text(
-              "Goin Group",
-              style: TextStyle(color: Colors.white, fontSize: 11),
+            child: Text(
+              buttonTwoText,
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 11,
+                  fontWeight: FontWeight.bold),
             ),
           ),
         ),

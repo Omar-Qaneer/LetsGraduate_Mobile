@@ -26,6 +26,7 @@ class CustomStudentsView extends StatelessWidget {
             size: 45,
           ),
           trailing: CustomTrailing(
+            buttonTwoText: "Join Group",
             onPressed1: () {
               controller.goToStudentDetailsPage(student);
             },
