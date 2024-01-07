@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/widget/student/custom_listtile.dart';
 
 class RegisterToSupervisor extends StatelessWidget {
   const RegisterToSupervisor({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // final data = [
-    //   {
-    //     'name': 'Dr. Abdalla Rashed',
-    //     'department': 'Computer Engineering',
-    //     'email': 'abdallah@gmail.com',
-    //     'expertise': 'Artificial Intelligence',
-    //     'researchAreas': ['Machine Learning', 'Natural Language Processing'],
-    //   },
-    //   {
-    //     'name': 'Dr. Aladdin Masri',
-    //     'department': 'Computer Engineering',
-    //     'email': 'aladdin@gmail.com',
-    //     'expertise': 'Software Engineering',
-    //     'researchAreas': ['Cloud Computing', 'Distributed Systems'],
-    //   },
-    // ];
+    final supervisors = [
+      {
+        'name': 'Dr. Abdalla Rashed',
+        'department': 'Computer Engineering',
+        'email': 'abdallah@gmail.com',
+        'expertise': 'Artificial Intelligence',
+        'researchAreas': ['Machine Learning', 'Natural Language Processing'],
+      },
+      {
+        'name': 'Dr. Aladdin Masri',
+        'department': 'Computer Engineering',
+        'email': 'aladdin@gmail.com',
+        'expertise': 'Software Engineering',
+        'researchAreas': ['Cloud Computing', 'Distributed Systems'],
+      },
+    ];
 
     // final rows = [
     //   const DataRow(cells: [
@@ -86,7 +87,7 @@ class RegisterToSupervisor extends StatelessWidget {
 
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -98,12 +99,11 @@ class RegisterToSupervisor extends StatelessWidget {
                 "Available Supervisors"
               ];
               List<double> fontSizes = [30, 16, 25];
-              List<double> verticalPaddings = [5, 15, 15];
               List<Color> colors = [Colors.blue, Colors.black, Colors.blue];
 
               return Padding(
-                padding:
-                    EdgeInsets.symmetric(vertical: verticalPaddings[index]),
+                padding: EdgeInsets.symmetric(
+                    vertical: (index + 1) * 5, horizontal: 12),
                 child: Text(
                   texts[index],
                   style: TextStyle(
@@ -111,6 +111,27 @@ class RegisterToSupervisor extends StatelessWidget {
                 ),
               );
             }),
+
+            ListView.separated(
+              physics: const ScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: supervisors.length,
+              itemBuilder: (context, index) {
+                final supervisor = supervisors[index];
+                return CustomListTileStudent(
+                  title: supervisor['name'].toString(),
+                  subtitle: supervisor['email'].toString(),
+                  widget: const Icon(
+                    Icons.account_circle,
+                    size: 45,
+                  ),
+                  pageName: 'RegisterToSupervisor',
+                );
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return const Divider();
+              },
+            ),
           ],
         ),
       ),
