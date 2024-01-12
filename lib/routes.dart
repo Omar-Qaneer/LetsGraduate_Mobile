@@ -9,7 +9,7 @@ import 'package:flutter_application_1/view/screen/auth/forgetpassword/verifycode
 import 'package:flutter_application_1/view/screen/auth/success_signup.dart';
 import 'package:flutter_application_1/view/screen/auth/verifyemailsignup.dart';
 import 'package:flutter_application_1/view/screen/student/student_homescreen.dart';
-import 'package:flutter_application_1/view/screen/supervisor/evaluategroups.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluategroups.dart';
 import 'package:flutter_application_1/core/shared/groupdetails.dart';
 import 'package:flutter_application_1/core/shared/custom_user_details.dart';
 import 'package:flutter_application_1/view/screen/supervisor/supervisorhomescreen.dart';

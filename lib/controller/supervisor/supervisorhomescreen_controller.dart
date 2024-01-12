@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluate_my_groups.dart';
-import 'package:flutter_application_1/view/screen/supervisor/evaluategroups.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluategroups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/mygroups/mygroups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/notifications.dart';
 import 'package:flutter_application_1/view/screen/supervisor/profile_supervisor.dart';
