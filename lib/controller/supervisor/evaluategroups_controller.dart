@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/constant/routes.dart';
 import 'package:get/get.dart';
 
 abstract class EvaluateGroupsController extends GetxController {
   void setSelectedButton(var newSelectedButton);
   List<Color> buttonColorAndTextColor();
   Color buttonColorProperty(int index);
+  void goToEvaluateAbstractsPart2(var group);
+  void goToEvaluateMyGroupsPart2(var group);
 }
 
 class EvaluateGroupsControllerImp extends EvaluateGroupsController {
@@ -38,5 +41,15 @@ class EvaluateGroupsControllerImp extends EvaluateGroupsController {
   Color buttonColorProperty(int index) {
     List<Color> colorsList = buttonColorAndTextColor();
     return colorsList.elementAt(index);
+  }
+
+  @override
+  void goToEvaluateAbstractsPart2(group) {
+    Get.toNamed(AppRoute.evaluateAbstractsPart2, arguments: group);
+  }
+
+  @override
+  void goToEvaluateMyGroupsPart2(group) {
+    Get.toNamed(AppRoute.evaluateMyGroupsPart2, arguments: group);
   }
 }

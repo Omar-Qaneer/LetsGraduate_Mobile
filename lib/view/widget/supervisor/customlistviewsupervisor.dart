@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/supervisor/evaluategroups_controller.dart';
+import 'package:get/get.dart';
 
 class CustomListViewSupervisor extends StatelessWidget {
   final dynamic groups;
   final Color containerColor;
   final Color textColor;
   final String pageName;
-  final void Function()? onTap;
 
   const CustomListViewSupervisor(
       {super.key,
       required this.groups,
       required this.containerColor,
       required this.textColor,
-      required this.pageName,
-      this.onTap});
+      required this.pageName});
 
   @override
   Widget build(BuildContext context) {
+    EvaluateGroupsControllerImp controller =
+        Get.put(EvaluateGroupsControllerImp());
     return ListView.builder(
       physics: const ScrollPhysics(),
       shrinkWrap: true,
@@ -36,7 +38,13 @@ class CustomListViewSupervisor extends StatelessWidget {
           child: Card(
             child: InkWell(
               borderRadius: BorderRadius.circular(15),
-              onTap: onTap,
+              onTap: () {
+                if (pageName == "EvaluateGroups") {
+                  controller.goToEvaluateAbstractsPart2(group);
+                } else if (pageName == "EvaluateMyGroups") {
+                  controller.goToEvaluateMyGroupsPart2(group);
+                }
+              },
               child: Row(
                 children: [
                   Container(

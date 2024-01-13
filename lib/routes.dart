@@ -9,9 +9,11 @@ import 'package:flutter_application_1/view/screen/auth/forgetpassword/verifycode
 import 'package:flutter_application_1/view/screen/auth/success_signup.dart';
 import 'package:flutter_application_1/view/screen/auth/verifyemailsignup.dart';
 import 'package:flutter_application_1/view/screen/student/student_homescreen.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluate_abstracts_part2.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluategroups.dart';
 import 'package:flutter_application_1/core/shared/groupdetails.dart';
 import 'package:flutter_application_1/core/shared/custom_user_details.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluate_mygroups/evaluate_mygroups_part2.dart';
 import 'package:flutter_application_1/view/screen/supervisor/supervisorhomescreen.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
@@ -27,5 +29,7 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.groupDetails: (context) => const GroupDetails(),
   AppRoute.userDetails: (context) => const UserDetails(),
   AppRoute.evaluateGroups: (context) => const EvaluateGroups(),
-  AppRoute.studentHomeScreen: (context) => const StudentHomeScreen()
+  AppRoute.studentHomeScreen: (context) => const StudentHomeScreen(),
+  AppRoute.evaluateAbstractsPart2: (context) => const Evaluation(),
+  AppRoute.evaluateMyGroupsPart2: (context) => const EvaluateMyGroupsPart2(),
 };

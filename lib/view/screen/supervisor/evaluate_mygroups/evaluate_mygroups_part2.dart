@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/constant/imageasset.dart';
-import 'package:flutter_application_1/core/functions/showdialog.dart';
 import 'package:get/get.dart';
 
 class EvaluateMyGroupsPart2 extends StatelessWidget {
@@ -9,7 +8,7 @@ class EvaluateMyGroupsPart2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final group = Get.arguments;
-    final projectObject = group.elementAt(1);
+    final projectObject = group.elementAt(0);
     final projectName = projectObject['projectName'].toString();
     return Scaffold(
       appBar: AppBar(),
@@ -48,35 +47,6 @@ class EvaluateMyGroupsPart2 extends StatelessWidget {
               ),
             ),
 
-            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-              MaterialButton(
-                color: Colors.blue,
-                textColor: Colors.white,
-                shape: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide.none),
-                onPressed: () {},
-                child: const Text("Pass"),
-              ),
-              MaterialButton(
-                color: Colors.red,
-                textColor: Colors.white,
-                shape: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide.none),
-                onPressed: () {
-                  showCustomDialog(context);
-                },
-                child: const Row(children: [
-                  Icon(Icons.comment),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text("FAIL")
-                ]),
-              ),
-            ]),
-
             SizedBox(
                 height: 350,
                 child: Image.asset(
@@ -85,17 +55,30 @@ class EvaluateMyGroupsPart2 extends StatelessWidget {
                 )),
 
             const SizedBox(
-              height: 30,
+              height: 40,
             ),
-            MaterialButton(
-              color: Colors.green,
-              textColor: Colors.white,
-              shape: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide.none),
-              onPressed: () {},
-              child: const Text("Accept Abstract"),
-            ),
+
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              MaterialButton(
+                color: Colors.blue,
+                textColor: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 50),
+                shape: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide.none),
+                onPressed: () {},
+                child: const Text("Pass"),
+              ),
+              MaterialButton(
+                  color: Colors.red,
+                  textColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  shape: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide.none),
+                  onPressed: () {},
+                  child: const Text("FAIL")),
+            ]),
           ],
         ),
       ),
