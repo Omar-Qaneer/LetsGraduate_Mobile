@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/constant/imageasset.dart';
-import 'package:flutter_application_1/view/widget/supervisor/customdialog.dart';
+import 'package:flutter_application_1/core/functions/showdialog.dart';
 import 'package:get/get.dart';
 
 class Evaluation extends StatelessWidget {
@@ -64,7 +64,9 @@ class Evaluation extends StatelessWidget {
                 shape: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide.none),
-                onPressed: () {},
+                onPressed: () {
+                  showCustomDialog(context);
+                },
                 child: const Row(children: [
                   Icon(Icons.comment),
                   SizedBox(
