@@ -182,6 +182,7 @@ class EvaluateMyGroups extends StatelessWidget {
                     ? evaluatedGroups
                     : notEvaluatedGroups,
                 pageName: 'EvaluateMyGroups',
+                onTap: () {},
               )),
             ],
           ),
