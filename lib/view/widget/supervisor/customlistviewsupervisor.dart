@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluate_abstracts_part2.dart';
+import 'package:get/get.dart';
 
 class CustomListViewSupervisor extends StatelessWidget {
   final dynamic groups;
@@ -34,7 +36,9 @@ class CustomListViewSupervisor extends StatelessWidget {
           child: Card(
             child: InkWell(
               borderRadius: BorderRadius.circular(15),
-              onTap: () {},
+              onTap: () {
+                Get.to(const Evaluation(), arguments: group);
+              },
               child: Row(
                 children: [
                   Container(
