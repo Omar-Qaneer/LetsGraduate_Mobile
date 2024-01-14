@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/constant/routes.dart';
 import 'package:get/get.dart';
+import 'package:pdfx/pdfx.dart';
 
 abstract class EvaluateGroupsController extends GetxController {
   void setSelectedButton(var newSelectedButton);
@@ -12,6 +13,14 @@ abstract class EvaluateGroupsController extends GetxController {
 
 class EvaluateGroupsControllerImp extends EvaluateGroupsController {
   var evaluteGroupsSelectedButton = 0;
+  late PdfControllerPinch pdfControllerPinch;
+
+  @override
+  void onInit() {
+    super.onInit();
+    pdfControllerPinch = PdfControllerPinch(
+        document: PdfDocument.openAsset("assets/pdfs/Lab1-v2.pdf"));
+  }
 
   @override
   void setSelectedButton(newSelectedButton) {

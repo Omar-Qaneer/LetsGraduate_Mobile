@@ -48,14 +48,14 @@ class EvaluateMyGroupsPart2 extends StatelessWidget {
             ),
 
             SizedBox(
-                height: 350,
+                height: 250,
                 child: Image.asset(
-                  AppImageAsset.evaluation,
-                  fit: BoxFit.fill,
+                  AppImageAsset.courseEvaluation,
+                  fit: BoxFit.contain,
                 )),
 
             const SizedBox(
-              height: 40,
+              height: 50,
             ),
 
             Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
