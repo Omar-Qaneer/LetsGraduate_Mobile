@@ -16,13 +16,6 @@ class EvaluateGroupsControllerImp extends EvaluateGroupsController {
   late PdfControllerPinch pdfControllerPinch;
 
   @override
-  void onInit() {
-    super.onInit();
-    pdfControllerPinch = PdfControllerPinch(
-        document: PdfDocument.openAsset("assets/pdfs/Lab1-v2.pdf"));
-  }
-
-  @override
   void setSelectedButton(newSelectedButton) {
     evaluteGroupsSelectedButton = newSelectedButton;
     update();

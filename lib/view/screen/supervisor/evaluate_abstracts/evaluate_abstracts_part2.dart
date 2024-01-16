@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/constant/imageasset.dart';
 import 'package:flutter_application_1/core/functions/showdialog.dart';
-import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/viewpdf.dart';
+import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/view_abstract.dart';
 import 'package:get/get.dart';
 
 class Evaluation extends StatelessWidget {
@@ -57,7 +57,7 @@ class Evaluation extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide.none),
                 onPressed: () {
-                  Get.to(const ViewPdfDocument());
+                  Get.to(() => const ViewAbstract());
                 },
                 child: const Text("View Abstract"),
               ),
