@@ -15,7 +15,7 @@ class CustomMaterialButtonDepartmentHead extends StatelessWidget {
         shape: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
             borderSide: BorderSide.none),
-        onPressed: () {},
+        onPressed: onPressed,
         child: withIcon
             ? Row(children: [
                 const Icon(

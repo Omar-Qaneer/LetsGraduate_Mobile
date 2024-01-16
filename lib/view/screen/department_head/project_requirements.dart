@@ -31,7 +31,9 @@ class ProjectRequirements extends StatelessWidget {
               CustomMaterialButtonDepartmentHead(
                 text: "Add Question",
                 withIcon: true,
-                onPressed: () {},
+                onPressed: () {
+                  controller.addQuestion();
+                },
               )
             ]),
             Expanded(
@@ -76,7 +78,6 @@ class ProjectRequirements extends StatelessWidget {
                                             },
                                           );
                                         });
-                                    // controller.deleteQuestion(index);
                                   }
                                 },
                               )

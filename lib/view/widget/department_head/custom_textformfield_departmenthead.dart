@@ -13,8 +13,9 @@ class CustomTextFormFieldDepartmentHead extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(fontSize: 12),
+        hintStyle: const TextStyle(fontSize: 14),
         suffixIcon: Icon(iconData),
+        contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
       ),
     );
