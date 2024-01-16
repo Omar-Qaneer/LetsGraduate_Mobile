@@ -14,7 +14,11 @@ class ProjectRequirements extends StatelessWidget {
         Get.put(ProjectRequirementsControllerImp());
     return Scaffold(
       appBar: AppBar(
-        title: Text("Project{$projectNumber} Requirements"),
+        title: Text(
+          "Project$projectNumber Requirements",
+          style: const TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blue,
         elevation: 0,
       ),
       body: Container(
@@ -42,6 +46,22 @@ class ProjectRequirements extends StatelessWidget {
                 style: TextStyle(color: Colors.grey, fontSize: 16),
               ),
             ),
+            GetBuilder<ProjectRequirementsControllerImp>(
+              builder: (controller) {
+                return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: controller.requirements.length,
+                  itemBuilder: (context, index) {
+                    final question = controller.requirements[index];
+                    return Card(
+                      child: ListTile(
+                        title: Text(question),
+                      ),
+                    );
+                  },
+                );
+              },
+            )
           ],
         ),
       ),
