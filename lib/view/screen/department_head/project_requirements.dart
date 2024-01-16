@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/department_head/project_requirements_controller.dart';
 import 'package:flutter_application_1/view/widget/department_head/custom_materialbutton_departmenthead.dart';
+import 'package:flutter_application_1/view/widget/department_head/custom_showdialog_departmenthead.dart';
 import 'package:flutter_application_1/view/widget/department_head/custom_textformfield_departmenthead.dart';
 import 'package:get/get.dart';
 
@@ -65,7 +66,17 @@ class ProjectRequirements extends StatelessWidget {
                                 onChanged: (value) {
                                   controller.toggleDropdown(-1);
                                   if (value == "delete") {
-                                    controller.deleteQuestion(index);
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return CustomShowDialogDepartmentHead(
+                                            onPressed: () {
+                                              controller.deleteQuestion(index);
+                                              Navigator.pop(context);
+                                            },
+                                          );
+                                        });
+                                    // controller.deleteQuestion(index);
                                   }
                                 },
                               )
