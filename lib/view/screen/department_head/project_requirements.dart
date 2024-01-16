@@ -9,11 +9,12 @@ class ProjectRequirements extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int projectNumber = Get.arguments;
     ProjectRequirementsControllerImp controller =
         Get.put(ProjectRequirementsControllerImp());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        title: Text("Project{$projectNumber} Requirements"),
         elevation: 0,
       ),
       body: Container(

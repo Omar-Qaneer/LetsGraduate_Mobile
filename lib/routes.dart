@@ -9,6 +9,7 @@ import 'package:flutter_application_1/view/screen/auth/forgetpassword/verifycode
 import 'package:flutter_application_1/view/screen/auth/success_signup.dart';
 import 'package:flutter_application_1/view/screen/auth/verifyemailsignup.dart';
 import 'package:flutter_application_1/view/screen/department_head/department_head_homescreen.dart';
+import 'package:flutter_application_1/view/screen/department_head/project_requirements.dart';
 import 'package:flutter_application_1/view/screen/student/student_homescreen.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluate_abstracts_part2.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluate_abstracts_part1.dart';
@@ -35,4 +36,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.evaluateMyGroupsPart2: (context) => const EvaluateMyGroupsPart2(),
   AppRoute.departmentHeadHomeScreen: (context) =>
       const DepartmentHeadHomeScreen(),
+  AppRoute.projectRequirements: (context) => const ProjectRequirements(),
 };

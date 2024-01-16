@@ -32,12 +32,16 @@ class CustomNavBarDepartmentHead extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.assignment_add),
               title: const Text("Project1 requirements"),
-              onTap: () {},
+              onTap: () {
+                controller.goToProjectRequirementsPages(1);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.assignment_add),
               title: const Text("Project2 requirements"),
-              onTap: () {},
+              onTap: () {
+                controller.goToProjectRequirementsPages(2);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.groups),
