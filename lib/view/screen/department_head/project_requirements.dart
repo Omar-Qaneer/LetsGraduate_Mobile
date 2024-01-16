@@ -56,6 +56,24 @@ class ProjectRequirements extends StatelessWidget {
                     return Card(
                       child: ListTile(
                         title: Text(question),
+                        trailing: controller.expandedCardIndex == index
+                            ? DropdownButton(
+                                items: controller.items
+                                    .map((String item) => DropdownMenuItem(
+                                        value: item, child: Text(item)))
+                                    .toList(),
+                                onChanged: (value) {
+                                  controller.toggleDropdown(-1);
+                                  if (value == "delete") {
+                                    controller.deleteQuestion(index);
+                                  }
+                                },
+                              )
+                            : IconButton(
+                                onPressed: () {
+                                  controller.toggleDropdown(index);
+                                },
+                                icon: const Icon(Icons.more_vert)),
                       ),
                     );
                   },
