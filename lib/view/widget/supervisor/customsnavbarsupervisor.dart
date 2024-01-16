@@ -19,7 +19,7 @@ class CustomNavBarSupervisor extends StatelessWidget {
                       child: ClipOval(
                           child: Icon(
                         Icons.account_circle,
-                        size: 75,
+                        size: 70,
                       )),
                     ),
                     decoration: BoxDecoration(
@@ -43,6 +43,21 @@ class CustomNavBarSupervisor extends StatelessWidget {
                     },
                   ),
                   ListTile(
+                    leading: const Icon(Icons.track_changes_outlined),
+                    title: const Text("Department managements"),
+                    onTap: () {
+                      controller.goToDepartmentHeadHomescreen();
+                    },
+                  ),
+                  const Divider(),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      "Track Groups",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
+                  ListTile(
                     leading: const Icon(Icons.group_sharp),
                     title: const Text("My Groups"),
                     subtitle: const Text("Information & Details"),
@@ -59,22 +74,31 @@ class CustomNavBarSupervisor extends StatelessWidget {
                       controller.listPage.elementAt(controller.currentPage);
                     },
                   ),
+                  const Divider(),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      "Evaluate Groups",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
                   ListTile(
                     leading: const Icon(Icons.grading_sharp),
-                    title: const Text("Evaluate Groups"),
+                    title: const Text("Evaluate Abstracts"),
                     onTap: () {
                       controller.changePage(3);
                       controller.listPage.elementAt(controller.currentPage);
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.grading_sharp),
+                    leading: const Icon(Icons.checklist_outlined),
                     title: const Text("Evaluate MyGroups"),
                     onTap: () {
                       controller.changePage(7);
                       controller.listPage.elementAt(controller.currentPage);
                     },
                   ),
+                  const Divider(),
                   ListTile(
                     leading: const Icon(Icons.settings),
                     title: const Text("Settings"),

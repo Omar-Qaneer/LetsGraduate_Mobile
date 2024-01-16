@@ -14,4 +14,5 @@ class AppRoute {
   static const String studentHomeScreen = "/studenthomescreen";
   static const String evaluateAbstractsPart2 = "/evaluateabstractspart2";
   static const String evaluateMyGroupsPart2 = "/evaluatemygroupspart2";
+  static const String departmentHeadHomeScreen = "/departmentheadhomeScreen";
 }

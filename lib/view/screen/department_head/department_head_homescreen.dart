@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controller/supervisor/supervisorhomescreen_controller.dart';
-import 'package:flutter_application_1/view/widget/supervisor/customsnavbarsupervisor.dart';
+import 'package:flutter_application_1/controller/department_head/department_head_homescreen_controller.dart';
 import 'package:get/get.dart';
 
-class SupervisorHomeScreen extends StatelessWidget {
-  const SupervisorHomeScreen({super.key});
+class DepartmentHeadHomeScreen extends StatelessWidget {
+  const DepartmentHeadHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(SupervisorHomeScreenControllerImp());
+    Get.put(DepartmentHeadHomeScreenControllerImp());
     int selectedIndex = 0;
-    return GetBuilder<SupervisorHomeScreenControllerImp>(
+    return GetBuilder<DepartmentHeadHomeScreenControllerImp>(
         builder: (controller) => Scaffold(
               bottomNavigationBar: BottomNavigationBar(
                   currentIndex: selectedIndex,
@@ -27,39 +26,30 @@ class SupervisorHomeScreen extends StatelessWidget {
                       label: "Home",
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(
-                        Icons.groups,
-                        size: 30,
-                      ),
-                      label: "MyGroups",
+                      icon: Icon(Icons.group),
+                      label: "Groups",
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.settings),
-                      label: "Setting",
+                      icon: Icon(Icons.timer),
+                      label: "Deadlines",
                     ),
                   ]),
-              drawer: const CustomNavBarSupervisor(),
               appBar: AppBar(
                 title: const Text(
                   "Let's Graduate",
                   style: TextStyle(color: Colors.white),
                 ),
                 backgroundColor: Colors.blue,
-                elevation: 0.0,
                 actions: [
                   IconButton(
-                      onPressed: () {
-                        controller.changePage(5);
-                      },
+                      onPressed: () {},
                       icon: const Icon(
                         Icons.notifications,
                         color: Colors.white,
                         size: 30,
                       )),
                   IconButton(
-                      onPressed: () {
-                        controller.changePage(6);
-                      },
+                      onPressed: () {},
                       icon: const Icon(
                         Icons.account_circle,
                         size: 40,

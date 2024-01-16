@@ -4,8 +4,8 @@ import 'package:flutter_application_1/view/widget/supervisor/customlistviewsuper
 import 'package:flutter_application_1/view/widget/supervisor/customrowsupervisor.dart';
 import 'package:get/get.dart';
 
-class EvaluateGroups extends StatelessWidget {
-  const EvaluateGroups({super.key});
+class EvaluateAbstractsPart1 extends StatelessWidget {
+  const EvaluateAbstractsPart1({super.key});
 
   @override
   Widget build(BuildContext context) {
