@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/department_head/department_head_homescreen_controller.dart';
+import 'package:flutter_application_1/view/widget/department_head/custom_navbar_departmenthead.dart';
 import 'package:get/get.dart';
 
 class DepartmentHeadHomeScreen extends StatelessWidget {
@@ -34,6 +35,7 @@ class DepartmentHeadHomeScreen extends StatelessWidget {
                       label: "Deadlines",
                     ),
                   ]),
+              drawer: const CustomNavBarDepartmentHead(),
               appBar: AppBar(
                 title: const Text(
                   "Let's Graduate",

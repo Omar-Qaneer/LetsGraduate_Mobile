@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/constant/routes.dart';
-import 'package:flutter_application_1/view/screen/department_head/department_head_homescreen.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluate_mygroups/evaluate_my_groups.dart';
 import 'package:flutter_application_1/view/screen/supervisor/evaluate_abstracts/evaluate_abstracts_part1.dart';
 import 'package:flutter_application_1/view/screen/supervisor/mygroups.dart';
@@ -48,6 +47,6 @@ class SupervisorHomeScreenControllerImp extends SupervisorHomeScreenController {
 
   @override
   void goToDepartmentHeadHomescreen() {
-    Get.toNamed(AppRoute.departmentHeadHomeScreen);
+    Get.offNamed(AppRoute.departmentHeadHomeScreen);
   }
 }
